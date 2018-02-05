@@ -7,7 +7,11 @@ public class controlPlayerActive : MonoBehaviour {
     public GameObject p2;
     public GameObject p3;
 
-    private int counter; //keeps track of counter, which character should move
+    //Hide it, shouldn't show up in inspector
+    [HideInInspector]
+    public GameObject isActive; //Keeps track of the gameobject that is Active so other scripts can access this
+
+    private static int counter; //keeps track of counter, which character should move. Can only be used in this script (static)
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +21,7 @@ public class controlPlayerActive : MonoBehaviour {
         p2.GetComponent<playerControler>().enabled = false;
         p3.GetComponent<playerControler>().enabled = false;
         counter = 2;
+        isActive = p1;
     }
 	
 	// Update is called once per frame
@@ -28,6 +33,7 @@ public class controlPlayerActive : MonoBehaviour {
                 p1.GetComponent<playerControler>().enabled = true;
                 p2.GetComponent<playerControler>().enabled = false;
                 p3.GetComponent<playerControler>().enabled = false;
+                isActive = p1;
                 counter++;
             }
             else if (counter == 2) //Character 2 is in control
@@ -35,6 +41,7 @@ public class controlPlayerActive : MonoBehaviour {
                 p1.GetComponent<playerControler>().enabled = false;
                 p2.GetComponent<playerControler>().enabled = true;
                 p3.GetComponent<playerControler>().enabled = false;
+                isActive = p2;
                 counter++;
             }
             else if (counter == 3) //Character 3 is in control
@@ -42,8 +49,21 @@ public class controlPlayerActive : MonoBehaviour {
                 p1.GetComponent<playerControler>().enabled = false;
                 p2.GetComponent<playerControler>().enabled = false;
                 p3.GetComponent<playerControler>().enabled = true;
+                isActive = p3;
                 counter = 1; //reset
             }
         }
+    }
+
+    //Returns the GameObject that is active
+    public GameObject isActiveO()
+    {
+        return isActive;
+    }
+
+    //Returns the name of the GameObject that is active
+    public string isActiveName()
+    {
+        return isActive.name;
     }
 }
