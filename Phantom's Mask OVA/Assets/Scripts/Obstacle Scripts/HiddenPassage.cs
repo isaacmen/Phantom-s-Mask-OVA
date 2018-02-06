@@ -30,13 +30,13 @@ public class HiddenPassage : MonoBehaviour {
     void OnTriggerStay2D(Collider2D player)
     {
         //If it's invisible and Veronica is touching it
-        if (isInvisible == true && player.gameObject.name == "Veronica")
+        if (isInvisible == true && player.gameObject.name == "Caroline")
         {
             //If player is pressing spacebar
             if (Input.GetKeyDown("e"))
             {
                 //Check Veronica is in control by checking the controlPlayerActive isActiveName function which returns string name of object in control. 
-                if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Veronica")
+                if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline")
                 {
                     //Make the doors appear
                     gameObject.GetComponent<Renderer>().enabled = true;
