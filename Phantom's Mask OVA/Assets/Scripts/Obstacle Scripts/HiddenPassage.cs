@@ -33,7 +33,7 @@ public class HiddenPassage : MonoBehaviour {
         if (isInvisible == true && player.gameObject.name == "Veronica")
         {
             //If player is pressing spacebar
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown("e"))
             {
                 //Check Veronica is in control by checking the controlPlayerActive isActiveName function which returns string name of object in control. 
                 if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Veronica")

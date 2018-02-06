@@ -24,7 +24,7 @@ public class buttonDeleteDoor : MonoBehaviour {
         if (doorDestroyed == false && player.gameObject.name == "Robbie") 
         {
              //If it's Robbie and he's pressing Spacebar(special move)
-             if (Input.GetKeyDown(KeyCode.Space))
+             if (Input.GetKeyDown("e"))
              {
                   //Check Robbie is in control by checking the controlPlayerActive isActiveName function which returns string name of object in control. 
                  //Robbie must be active for This to work, prevents swapping to another char and pressing spacebar
