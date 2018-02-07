@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Isaac.unity
+    guid: cd7d31c3d7a2cdd449503cab8c41cc24
+  - enabled: 1
+    path: Assets/Scenes/Abigail.unity
+    guid: 7c5b710fd5aa0c54ca118a3a59805fbe
