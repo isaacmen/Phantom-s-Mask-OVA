@@ -12,9 +12,10 @@ public class ReadText : MonoBehaviour {
 
 	//this is the text UI element being read to
 	public UnityEngine.UI.Text Displaytext;
+	public UnityEngine.UI.Image Textbox;
 
 	//this is if the text is active
-	public bool active = false;
+	public bool active;
 
 	private string[] lines;
 	private int max;
@@ -46,6 +47,12 @@ public class ReadText : MonoBehaviour {
 				Displaytext.text = "";
 				active = false;
 			}
+		}
+
+		if (Displaytext.text != "") {
+			Textbox.gameObject.SetActive (true);
+		} else {
+			Textbox.gameObject.SetActive (false);
 		}
 	}
 }
