@@ -8,8 +8,10 @@ public class restartScene : MonoBehaviour, IPointerClickHandler {
 
 	public void OnPointerClick(PointerEventData pointerEventData)
 	{
+		Scene thisscene = SceneManager.GetActiveScene ();
+
 		if (pointerEventData.button == PointerEventData.InputButton.Left) {
-			Debug.Log ("clicked");
+			SceneManager.LoadScene (thisscene.name);
 		}
 	}
 }

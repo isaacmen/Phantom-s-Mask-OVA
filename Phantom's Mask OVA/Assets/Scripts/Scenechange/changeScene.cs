@@ -18,5 +18,8 @@ public class changeScene : MonoBehaviour {
 		if (active) {
 			SceneManager.LoadScene (level);
 		}
+		if (Input.GetKeyDown("space")){
+			active = true;
+		}
 	}
 }
