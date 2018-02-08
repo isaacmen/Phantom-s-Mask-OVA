@@ -5,6 +5,7 @@ using UnityEngine;
 /* Added to objects that Yvette can break. These objects are destroyed. */
 public class breakableObject : MonoBehaviour {
 
+    private bool yvetteTouching = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,16 +13,8 @@ public class breakableObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
-    void OnCollisionEnter2D(Collision2D player)
-    {
-        OnCollisionStay2D(player);
-    }
-    void OnCollisionStay2D(Collision2D player)
-    {
-        //Check if Yvette is touching the object and if e is being pressed
-        if (player.gameObject.name == "Yvette" && Input.GetKeyDown("e"))
+
+        if (yvetteTouching == true && Input.GetKeyDown("e"))
         {
             //Check Yvette is active
             if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
@@ -30,5 +23,19 @@ public class breakableObject : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
+
     }
+
+    void OnCollisionEnter2D(Collision2D player)
+    {
+        if(player.gameObject.name == "Yvette")
+            yvetteTouching = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D player)
+    {
+        if (player.gameObject.name == "Yvette")
+            yvetteTouching = false;
+    }
+
 }
