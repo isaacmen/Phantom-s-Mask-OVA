@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61831159434785198}
   - component: {fileID: 50260680891504348}
   - component: {fileID: 114999167736105358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Caroline
   m_TagString: Untagged
   m_Icon: {fileID: 0}

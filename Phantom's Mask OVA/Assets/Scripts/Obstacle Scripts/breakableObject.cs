@@ -14,7 +14,10 @@ public class breakableObject : MonoBehaviour {
 	void Update () {
 		
 	}
-
+    void OnCollisionEnter2D(Collision2D player)
+    {
+        OnCollisionStay2D(player);
+    }
     void OnCollisionStay2D(Collision2D player)
     {
         //Check if Yvette is touching the object and if e is being pressed
