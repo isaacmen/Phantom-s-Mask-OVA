@@ -4,16 +4,17 @@ using UnityEngine;
 
 
 /*
+ * Activated by carCheckFix after Caroline and Robbie interact with the car
+ * Checks if all 3 people are in the car. If they are, the car can move.
  * Attatched to Car. Need to input the names of the players in this level AND the tree that it will crash against in level 1. Not complete.
  */
-public class Car : MonoBehaviour {
+public class carMovement : MonoBehaviour {
     //Get current 3 active gameobjects
     public GameObject p1;
     public GameObject p2;
     public GameObject p3;
     public GameObject tree;
 
-    bool carWorks = true;
     bool canMove = true;
 
     bool p1inCar = false;
@@ -27,40 +28,33 @@ public class Car : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
+        //disable carCheckFix script
+        gameObject.GetComponent<carCheckFix>().enabled = false;
        }
 
     void Update()
     {
         //The car works and the car is touchign a player
-        if (carWorks == true)
-        {
-            if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == p1.name)
-                check_p1();
-            else if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == p2.name)
-                check_p2();
-            else if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == p3.name)
-                check_p3();
+        if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == p1.name)
+           check_p1();
+        else if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == p2.name)
+           check_p2();
+        else if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == p3.name)
+           check_p3();
 
-            //Check if everyone is in the car and if the car is not touching the tree. If they are, the car can move
-            if (inCar() == true && canMove == true)
-                carMovement();
-        }
+        //Check if everyone is in the car and if the car is not touching the tree. If they are, the car can move
+        if (inCar() == true && canMove == true)
+           carMove();
     }
 
     private void OnTriggerEnter2D(Collider2D cplayer)
     {
-        if (carWorks == true)
-        {
-            if ((GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == cplayer.name))
-            {
-                if (cplayer.name == p1.name)
-                    touchingp1 = true;
-                if (cplayer.name == p2.name)
-                    touchingp2 = true;
-                if (cplayer.name == p3.name)
-                    touchingp3 = true;
-            }
+             if (cplayer.name == p1.name)
+                 touchingp1 = true;
+             if (cplayer.name == p2.name)
+                 touchingp2 = true;
+             if (cplayer.name == p3.name)
+                 touchingp3 = true;
 
             //If it touches the tree, the car can't move. Make the car bounce away from the wall!
             if (cplayer.name == tree.name)
@@ -71,22 +65,16 @@ public class Car : MonoBehaviour {
                 force.Normalize();
                 GetComponent<Rigidbody2D>().AddForce(force * 100);
             }
-        }
     }
 
     private void OnTriggerExit2D(Collider2D cplayer)
     {
-        if(carWorks == true)
-        {
-            if ((GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == cplayer.name))
-            {
                 if (cplayer.name == p1.name)
                     touchingp1 = false;
                 if (cplayer.name == p2.name)
                     touchingp2 = false;
                 if (cplayer.name == p3.name)
                     touchingp3 = false;
-            }
             //No longer touching the tree, can move
             if (cplayer.name == tree.name)
             {
@@ -94,11 +82,10 @@ public class Car : MonoBehaviour {
                 //Make it stop moving left
                 GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             }
-        }
     }
 
     //Controls the car's movement
-    void carMovement()
+    void carMove()
     {
         if (canMove == true)
         {
