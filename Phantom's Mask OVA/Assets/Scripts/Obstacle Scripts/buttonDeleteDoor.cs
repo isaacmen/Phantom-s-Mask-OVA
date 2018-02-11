@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class buttonDeleteDoor : MonoBehaviour {
     public GameObject door; //Get the gameobject door this will control
-    private static bool doorDestroyed; //Keeps track if the door was already destroyed, is only used in this script(Static)
+    private bool doorDestroyed; //Keeps track if the door was already destroyed, is only used in this script(Static)
 
 	// Use this for initialization
 	void Start()

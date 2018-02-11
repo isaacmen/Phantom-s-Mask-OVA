@@ -15,15 +15,15 @@ public class carMovement : MonoBehaviour {
     public GameObject p3;
     public GameObject tree;
 
-    bool canMove = true;
+    private bool canMove = true;
 
-    bool p1inCar = false;
-    bool p2inCar = false;
-    bool p3inCar = false;
+    private bool p1inCar = false;
+    private bool p2inCar = false;
+    private bool p3inCar = false;
 
-    bool touchingp1 = false;
-    bool touchingp2 = false;
-    bool touchingp3 = false;
+    private bool touchingp1 = false;
+    private bool touchingp2 = false;
+    private bool touchingp3 = false;
 
 
     // Use this for initialization

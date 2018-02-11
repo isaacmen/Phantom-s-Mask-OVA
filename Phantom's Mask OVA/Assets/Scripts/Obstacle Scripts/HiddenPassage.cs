@@ -13,7 +13,7 @@ public class HiddenPassage : MonoBehaviour {
     public GameObject door2;
 
     //Hide it from inspector
-    private static bool isInvisible; //Whether the doors are invisible or not.
+    private bool isInvisible; //Whether the doors are invisible or not.
 
 	// Use this for initialization
 	void Start () {

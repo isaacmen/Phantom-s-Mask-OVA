@@ -11,7 +11,7 @@ public class controlPlayerActive : MonoBehaviour {
     [HideInInspector]
     public GameObject isActive; //Keeps track of the gameobject that is Active so other scripts can access this
 
-    private static int counter; //keeps track of counter, which character should move. Can only be used in this script (static)
+    private int counter; //keeps track of counter, which character should move. Can only be used in this script (static)
 
 	// Use this for initialization
 	void Start () {
