@@ -28,6 +28,7 @@ public class ReadText : MonoBehaviour {
     //Keeps track if a new file has to be reread. Happens the instant active changes fron false to true. Resets afterwards.
     private bool readFile = true;
 
+
 	//gets lines from file and 
 	string[] GetLines (string filename) {
 		string path = pathFolder + filename;
@@ -46,6 +47,7 @@ public class ReadText : MonoBehaviour {
 	void Update () {
 		if (active) {
             getlines();
+
             if (currentline < max)
             {
                  Displaytext.text = lines[currentline];
@@ -58,6 +60,8 @@ public class ReadText : MonoBehaviour {
                 currentline = 0; //reset the current line
                 readFile = true;
                 active = false;
+                //Let the player swap chars again
+                GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().enabled = true;
             }
 		}
 
@@ -75,8 +79,13 @@ public class ReadText : MonoBehaviour {
             lines = GetLines(filename);
             max = lines.Length;
             readFile = false;
+            //Disable the script to swap chars
+            GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().enabled = false;
         }
         //Displaytext.text = "";
     }
+
+    
+
 
 }
