@@ -19,11 +19,14 @@ public class ReadText : MonoBehaviour {
 	public UnityEngine.UI.Image Textbox;
 
 	//this is if the text is active
-	public bool active;
+	public bool active = false;
 
 	private string[] lines;
 	private int max;
 	private int currentline = 0;
+
+    //Keeps track if a new file has to be reread. Happens the instant active changes fron false to true. Resets afterwards.
+    private bool readFile = true;
 
 	//gets lines from file and 
 	string[] GetLines (string filename) {
@@ -35,22 +38,27 @@ public class ReadText : MonoBehaviour {
 		
 
 	// Use this for initialization
-	void Start () {
-		lines = GetLines (filename);
-		max = lines.Length;
-		Displaytext.text = "";
+	void Start ()
+    {
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (active) {
-			if (currentline < max && Input.GetKeyDown ("space")) {
-				Displaytext.text = lines [currentline];
-				currentline++;
-			} else if (currentline >= max && Input.GetKeyDown ("space")) {
-				Displaytext.text = "";
-				active = false;
-			}
+            getlines();
+            if (currentline < max)
+            {
+                 Displaytext.text = lines[currentline];
+                 currentline++;
+            }
+
+            else if (currentline >= max && Input.GetKeyDown("space"))
+            {
+                Displaytext.text = "";
+                currentline = 0; //reset the current line
+                readFile = true;
+                active = false;
+            }
 		}
 
 		if (Displaytext.text != "") {
@@ -59,4 +67,16 @@ public class ReadText : MonoBehaviour {
 			Textbox.gameObject.SetActive (false);
 		}
 	}
+
+    void getlines()
+    {
+        if (readFile)
+        {
+            lines = GetLines(filename);
+            max = lines.Length;
+            readFile = false;
+        }
+        //Displaytext.text = "";
+    }
+
 }

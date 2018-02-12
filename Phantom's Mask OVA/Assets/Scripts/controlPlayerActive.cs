@@ -34,7 +34,7 @@ public class controlPlayerActive : MonoBehaviour {
                 p2.GetComponent<playerControler>().enabled = false;
                 p3.GetComponent<playerControler>().enabled = false;
                 isActive = p1;
-                counter++;
+                counter = 2;
             }
             else if (counter == 2) //Character 2 is in control
             {
@@ -42,7 +42,7 @@ public class controlPlayerActive : MonoBehaviour {
                 p2.GetComponent<playerControler>().enabled = true;
                 p3.GetComponent<playerControler>().enabled = false;
                 isActive = p2;
-                counter++;
+                counter = 3;
             }
             else if (counter == 3) //Character 3 is in control
             {

@@ -10,9 +10,9 @@ using UnityEngine;
  */
 public class carMovement : MonoBehaviour {
     //Get current 3 active gameobjects
-    public GameObject p1;
-    public GameObject p2;
-    public GameObject p3;
+    public GameObject p1;  //ROBBIE
+    public GameObject p2;  //CAROLINE
+    public GameObject p3;  //YVETTE
     public GameObject tree;
 
     private bool canMove = true;
@@ -21,20 +21,24 @@ public class carMovement : MonoBehaviour {
     private bool p2inCar = false;
     private bool p3inCar = false;
 
-    private bool touchingp1 = false;
-    private bool touchingp2 = false;
-    private bool touchingp3 = false;
+    //Hide these from the inspector, but make them public so other classes cna see them
+    [HideInInspector]
+    public bool touchingp1 = false;
+    [HideInInspector]
+    public bool touchingp2 = false;
+    [HideInInspector]
+    public bool touchingp3 = false;
 
 
     // Use this for initialization
     void Start () {
         //disable carCheckFix script
-        gameObject.GetComponent<carCheckFix>().enabled = false;
+        //gameObject.GetComponent<carCheckFix>().enabled = false;
        }
 
     void Update()
     {
-        //The car works and the car is touchign a player
+        //The car works and the car is touching a player
         if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == p1.name)
            check_p1();
         else if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == p2.name)

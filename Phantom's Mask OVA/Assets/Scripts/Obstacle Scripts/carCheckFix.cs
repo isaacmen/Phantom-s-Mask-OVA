@@ -12,14 +12,19 @@ using UnityEngine;
  */
 public class carCheckFix : MonoBehaviour {
 
-    private bool carolineActivated = false;
-    private bool robbieActivated = false;
+    [HideInInspector]
+    public bool carolineActivated = false;
+    [HideInInspector]
+    public bool robbieActivated = false;
 
+ 
     private bool carolineTouching = false;
     private bool robbieTouching = false;
+    //Not used for this script, but used for other scripts
+    private bool yvetteTouching = false;
 
     //This field will be used by the Text fields to see if the car has ben fixed
-    [SerializeField]
+    [HideInInspector]
     public bool carIsFixed = false;
 
 	// Use this for initialization
@@ -30,19 +35,22 @@ public class carCheckFix : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //if Caroline is touching the car, Caroline hasn't fixed the car, and caroline is active
-        if (carolineTouching = true && carolineActivated == false && (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline"))
-            checkCarolineActivate();
+        if (!carIsFixed)
+        {
+            //if Caroline is touching the car, Caroline hasn't fixed the car, and caroline is active
+            if (carolineTouching = true && carolineActivated == false && (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline"))
+                checkCarolineActivate();
 
-        //If robbie is touchign the car and caroline found what's wrong with the car and robie is active
-        else if (robbieTouching = true && carolineActivated == true && (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie"))
-            checkRobbieActivate();
+            //If robbie is touchign the car and caroline found what's wrong with the car and robie is active
+            else if (robbieTouching = true && carolineActivated == true && (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie"))
+                checkRobbieActivate();
 
-        checkBothActivaed();
+            checkBothActivated();
+        }
 	}
 
     //checks if both are activated. if they are, enable carMovement script
-    void checkBothActivaed()
+    void checkBothActivated()
     {
         if (robbieActivated == true && carolineActivated == true)
         {
@@ -83,6 +91,9 @@ public class carCheckFix : MonoBehaviour {
         //Check if Robbie is touching the car
         else if (player.name == "Robbie")
             robbieTouching = true;
+
+        else if (player.name == "Yvette")
+            yvetteTouching = true;
     }
 
     private void OnTriggerExit2D(Collider2D player)
@@ -94,5 +105,9 @@ public class carCheckFix : MonoBehaviour {
         //Check if Robbie is touching the car
         else if (player.name == "Robbie")
             robbieTouching = false;
+
+        //Check if Yvette is touching the car
+        else if (player.name == "Yvette")
+            yvetteTouching = false;
     }
 }
