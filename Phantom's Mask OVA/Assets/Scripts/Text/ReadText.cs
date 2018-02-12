@@ -8,7 +8,11 @@ using System.IO;
 public class ReadText : MonoBehaviour {
 
 	//this is the text file being read
+    //the text handling scrips will manipulate this variable based on what needs to be displayed
 	public string filename;
+    //The path that contains the file ex: Assets/Text/ 
+    //The path will be different for different objects, helps with organization
+    public string pathFolder;
 
 	//this is the text UI element being read to
 	public UnityEngine.UI.Text Displaytext;
@@ -23,7 +27,7 @@ public class ReadText : MonoBehaviour {
 
 	//gets lines from file and 
 	string[] GetLines (string filename) {
-		string path = "Assets/Text/" + filename;
+		string path = pathFolder + filename;
 		string[] result = File.ReadAllLines (path);
 
 		return result;

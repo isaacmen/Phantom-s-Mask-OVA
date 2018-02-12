@@ -18,6 +18,10 @@ public class carCheckFix : MonoBehaviour {
     private bool carolineTouching = false;
     private bool robbieTouching = false;
 
+    //This field will be used by the Text fields to see if the car has ben fixed
+    [SerializeField]
+    public bool carIsFixed = false;
+
 	// Use this for initialization
 	void Start () {
         //Disable the carMovement script when this starts up
@@ -41,7 +45,10 @@ public class carCheckFix : MonoBehaviour {
     void checkBothActivaed()
     {
         if (robbieActivated == true && carolineActivated == true)
-            gameObject.GetComponent < carMovement >().enabled = true;
+        {
+            gameObject.GetComponent<carMovement>().enabled = true;
+            carIsFixed = true;
+        }
     }
 
     //Makes Caroline activate the car

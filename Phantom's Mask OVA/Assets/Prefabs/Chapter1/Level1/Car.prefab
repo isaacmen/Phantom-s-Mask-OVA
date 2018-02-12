@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 114984602882028104}
   - component: {fileID: 50213062522396944}
   - component: {fileID: 114381531380004890}
+  - component: {fileID: 114503338657477694}
+  - component: {fileID: 114446536266167506}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -100,6 +102,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ffd9a99440c5d144b2c8ff632deb884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carIsFixed: 0
+--- !u!114 &114446536266167506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1463379752053452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e4be5738aec22488e211560b264daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carIsFixed: 0
+--- !u!114 &114503338657477694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1463379752053452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4c6d219cd02be41b5002dd02250347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filename: 
+  pathFolder: Assets/Texts/Chapter1/Level1/
+  Displaytext: {fileID: 0}
+  Textbox: {fileID: 0}
+  active: 0
 --- !u!114 &114984602882028104
 MonoBehaviour:
   m_ObjectHideFlags: 1
