@@ -48,7 +48,13 @@ public class ReadText : MonoBehaviour {
 		if (active) {
             getlines();
 
-            if (currentline < max)
+			if (currentline == 0)
+			{
+				Displaytext.text = lines[currentline];
+				currentline++;
+			}
+
+			else if (currentline < max && Input.GetKeyDown("space"))
             {
                  Displaytext.text = lines[currentline];
                  currentline++;

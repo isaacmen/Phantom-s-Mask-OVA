@@ -9,49 +9,49 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1734972727855044}
+  m_RootGameObject: {fileID: 1350091654109040}
   m_IsPrefabParent: 1
---- !u!1 &1734972727855044
+--- !u!1 &1350091654109040
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4095166025630348}
-  - component: {fileID: 114133626500751936}
+  - component: {fileID: 4223934570651948}
+  - component: {fileID: 114222226383681776}
   m_Layer: 0
-  m_Name: txtreader
-  m_TagString: textbox
+  m_Name: controlPlayerActive
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4095166025630348
+--- !u!4 &4223934570651948
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1734972727855044}
+  m_GameObject: {fileID: 1350091654109040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.5829825, y: 1.2865248, z: -0.06692348}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114133626500751936
+--- !u!114 &114222226383681776
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1734972727855044}
+  m_GameObject: {fileID: 1350091654109040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a4c6d219cd02be41b5002dd02250347, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c0aba216b2b014489839d6c8382599c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filename: testtext.txt
-  Displaytext: {fileID: 0}
-  Textbox: {fileID: 0}
-  active: 1
+  p1: {fileID: 0}
+  p2: {fileID: 0}
+  p3: {fileID: 0}
+  isActive: {fileID: 0}

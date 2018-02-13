@@ -18,8 +18,10 @@ public class changeScene : MonoBehaviour {
 		if (active) {
 			SceneManager.LoadScene (level);
 		}
-		if (Input.GetKeyDown("space")){
-			active = true;
-		}
+	}
+
+	void OnTriggerEnter2D (Collider2D other) {
+		Debug.Log ("entered");
+		active = true;
 	}
 }
