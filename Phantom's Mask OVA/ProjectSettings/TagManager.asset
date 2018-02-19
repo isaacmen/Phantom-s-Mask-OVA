@@ -7,6 +7,8 @@ TagManager:
   - Jumpable
   - ladder
   - textbox
+  - character
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -43,4 +45,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackgroundPlayer
+    uniqueID: 3449337875
+    locked: 0
+  - name: MainPlayer
+    uniqueID: 935375747
     locked: 0

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61333842897540140}
   m_Layer: 8
   m_Name: Yvette
-  m_TagString: Untagged
+  m_TagString: character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

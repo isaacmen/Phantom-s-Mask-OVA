@@ -20,8 +20,12 @@ public class controlPlayerActive : MonoBehaviour {
         p1.GetComponent<playerControler>().enabled = true;
         p2.GetComponent<playerControler>().enabled = false;
         p3.GetComponent<playerControler>().enabled = false;
+        p1.GetComponent<SpriteRenderer>().sortingLayerName = "MainPlayer";
+        p2.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
+        p3.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
         counter = 2;
         isActive = p1;
+
     }
 	
 	// Update is called once per frame
@@ -33,6 +37,9 @@ public class controlPlayerActive : MonoBehaviour {
                 p1.GetComponent<playerControler>().enabled = true;
                 p2.GetComponent<playerControler>().enabled = false;
                 p3.GetComponent<playerControler>().enabled = false;
+                p1.GetComponent<SpriteRenderer>().sortingLayerName = "MainPlayer";
+                p2.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
+                p3.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
                 isActive = p1;
                 counter = 2;
             }
@@ -41,6 +48,9 @@ public class controlPlayerActive : MonoBehaviour {
                 p1.GetComponent<playerControler>().enabled = false;
                 p2.GetComponent<playerControler>().enabled = true;
                 p3.GetComponent<playerControler>().enabled = false;
+                p1.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
+                p2.GetComponent<SpriteRenderer>().sortingLayerName = "MainPlayer";
+                p3.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
                 isActive = p2;
                 counter = 3;
             }
@@ -49,6 +59,9 @@ public class controlPlayerActive : MonoBehaviour {
                 p1.GetComponent<playerControler>().enabled = false;
                 p2.GetComponent<playerControler>().enabled = false;
                 p3.GetComponent<playerControler>().enabled = true;
+                p1.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
+                p2.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
+                p3.GetComponent<SpriteRenderer>().sortingLayerName = "MainPlayer";
                 isActive = p3;
                 counter = 1; //reset
             }
