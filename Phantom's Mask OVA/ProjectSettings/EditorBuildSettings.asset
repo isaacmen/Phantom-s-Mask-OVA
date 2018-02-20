@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Testing/Isaac.unity
-    guid: cd7d31c3d7a2cdd449503cab8c41cc24
-  - enabled: 1
-    path: Assets/Scenes/Testing/Abigail.unity
-    guid: 7c5b710fd5aa0c54ca118a3a59805fbe
-  - enabled: 1
     path: Assets/Scenes/Chapter1/Chapter1 Level1.unity
     guid: 05a095ec4a1fe114b95ea6ab0769b98f
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/Chapter1 Level2.unity
+    guid: 82f03a44248ba604a90daeb9aaec0176
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/Chapter1 Level3.unity
+    guid: 243a0957ef25c98478a02badcbadea28
