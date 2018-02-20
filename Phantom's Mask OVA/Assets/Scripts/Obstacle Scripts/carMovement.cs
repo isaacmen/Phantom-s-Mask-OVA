@@ -184,4 +184,9 @@ public class carMovement : MonoBehaviour {
         }
     }
 
+    bool canCarMove()
+    {
+        return canMove;
+    }
+
 }
