@@ -20,7 +20,7 @@ public class breakableObject : MonoBehaviour {
             if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
             {
                 //Destroy this box
-                Destroy(gameObject);
+                Destroy(transform.parent.gameObject);
             }
         }
 
