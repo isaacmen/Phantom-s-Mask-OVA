@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filename: testtext.txt
+  pathFolder: Assets/Texts/Chapter1/Level3/
   Displaytext: {fileID: 0}
   Textbox: {fileID: 0}
   active: 1
