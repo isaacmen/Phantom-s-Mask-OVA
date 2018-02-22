@@ -32,6 +32,10 @@ public class carText : MonoBehaviour {
     private bool robbieTouching = false;
     private bool yvetteTouching = false;
 
+	void Start () {
+		GameObject reader = GameObject.FindGameObjectWithTag ("textbox");
+	}
+
     // Update is called once per frame
     void Update () {
         //If the car was fixed, disable this script

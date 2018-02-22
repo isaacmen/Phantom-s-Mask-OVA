@@ -20,15 +20,17 @@ public class playerControler : MonoBehaviour {
 	void Update () {
         float horizontal = Input.GetAxis("Horizontal");
         handleMovement(horizontal);
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+		if (Input.GetKeyDown("up") && grounded)
         {
             myRigidbody.AddForce(new Vector2(0, 6), ForceMode2D.Impulse);
         }
     }
 
     private void handleMovement(float horizontal)
-    {
-        myRigidbody.velocity = new Vector2(horizontal * speed,myRigidbody.velocity.y); //x-val -1, y-val 0
-    }
+	{
+		if (grounded) {
+			myRigidbody.velocity = new Vector2 (horizontal * speed, myRigidbody.velocity.y); //x-val -1, y-val 0
+		}
+	}
 
 }
