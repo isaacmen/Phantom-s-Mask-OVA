@@ -27,7 +27,6 @@ public class buttonDeleteDoor : MonoBehaviour {
                 //Robbie must be active for This to work, prevents swapping to another char and pressing spacebar
                 if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")
                 {
-                    Debug.Log("woo2");
                     //Destroy the Door gameobject
                     Destroy(door);
                     doorDestroyed = true;

@@ -88,7 +88,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -244,7 +243,6 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -272,12 +270,12 @@ Prefab:
     - target: {fileID: 224131437318954858, guid: 12194109cb9484d499eb3ea7d16d254a,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 372.5
       objectReference: {fileID: 0}
     - target: {fileID: 224131437318954858, guid: 12194109cb9484d499eb3ea7d16d254a,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 209.5
       objectReference: {fileID: 0}
     - target: {fileID: 224131437318954858, guid: 12194109cb9484d499eb3ea7d16d254a,
         type: 2}
@@ -496,7 +494,12 @@ Prefab:
       propertyPath: pathFolder
       value: Assets/Texts/Chapter1/Level1/
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1322775664365888, guid: 4a84f65e99e870a45a05b19cb23325f1, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114356499882372326, guid: 4a84f65e99e870a45a05b19cb23325f1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4a84f65e99e870a45a05b19cb23325f1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &344834620
@@ -1179,7 +1182,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1636728478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -237.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 986686866}
@@ -1341,3 +1344,14 @@ GameObject:
   m_PrefabParentObject: {fileID: 1322775664365888, guid: 4a84f65e99e870a45a05b19cb23325f1,
     type: 2}
   m_PrefabInternal: {fileID: 231401884}
+--- !u!114 &2032633687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2032633686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be0df32feda6824884197d279683805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
