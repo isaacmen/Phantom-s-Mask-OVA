@@ -7,11 +7,13 @@ public class SpinRight : MonoBehaviour {
     public GameObject ferrisWheel;
     private static bool robbieTouching;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         spin = false;
         robbieTouching = false;
-	}
+ 
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -31,7 +33,7 @@ public class SpinRight : MonoBehaviour {
     {
         Debug.Log("Spinning....");
         Rigidbody2D r = ferrisWheel.GetComponent<Rigidbody2D>();
-        r.MoveRotation(r.rotation + 10 * Time.deltaTime);
+        r.MoveRotation(r.rotation + 60 * Time.deltaTime);
     }
 
 
