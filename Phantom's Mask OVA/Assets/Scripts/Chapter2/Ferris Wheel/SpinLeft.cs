@@ -2,32 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpinRight : MonoBehaviour {
+public class SpinLeft : MonoBehaviour {
+
     public GameObject ferrisWheel;
     private static bool robbieTouching;
 
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         robbieTouching = false;
- 
-    }
-	
-	// Update is called once per frame
-	void Update () {
 
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         checkRobbieActivated();
     }
 
 
     private void checkRobbieActivated()
     {
-        if(robbieTouching && Input.GetKeyDown("e"))
+        if (robbieTouching && Input.GetKeyDown("e"))
         {
             //Robbie pressed e and he is active
-            if(GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")
+            if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")
             {
-                ferrisWheel.GetComponent<FerrisWheelMovement>().activateRightSpin();
+                ferrisWheel.GetComponent<FerrisWheelMovement>().activateLeftSpin();
             }
         }
     }
@@ -36,7 +38,7 @@ public class SpinRight : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D player)
     {
-        if(player.gameObject.name == "Robbie")
+        if (player.gameObject.name == "Robbie")
         {
             robbieTouching = true;
         }
@@ -49,6 +51,4 @@ public class SpinRight : MonoBehaviour {
             robbieTouching = false;
         }
     }
-
-
 }
