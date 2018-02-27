@@ -32,8 +32,10 @@ public class carText : MonoBehaviour {
     private bool robbieTouching = false;
     private bool yvetteTouching = false;
 
+	private GameObject reader;
+
 	void Start () {
-		GameObject reader = GameObject.FindGameObjectWithTag ("textbox");
+		reader = GameObject.FindGameObjectWithTag ("textbox");
 	}
 
     // Update is called once per frame
@@ -58,23 +60,23 @@ public class carText : MonoBehaviour {
         //Yvette's Line if Yvette is the active player
         if (yvetteTouching && !yvetteTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = brokenCarAfterInspection_Yvette;
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = brokenCarAfterInspection_Yvette;
             yvetteTouch = true;
         }
 
         //Caroline text if Caroline is the active player
         if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = brokenCarAfterInspection_Caroline;
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = brokenCarAfterInspection_Caroline;
             carolineTouch = true;
         }
 
         if (robbieTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = RobbieFixCar;
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = RobbieFixCar;
         }
     }
 
@@ -88,8 +90,8 @@ public class carText : MonoBehaviour {
         //if (gameObject.GetComponent<carCheckFix>().robbieTouching && !robbieTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         if (robbieTouching && !robbieTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = brokenCarBeforeInspection_Robbie;
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = brokenCarBeforeInspection_Robbie;
             robbieTouch = true;
         }
         //Yvette's line
@@ -97,16 +99,16 @@ public class carText : MonoBehaviour {
         //if (gameObject.GetComponent<carCheckFix>().yvetteTouching && !yvetteTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette" && Input.GetKey("e"))
         if (yvetteTouching && !yvetteTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = brokenCarBeforeInspection_Yvette;
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = brokenCarBeforeInspection_Yvette;
             yvetteTouch = true;
         }
 
         //If caroline is touching the car, she's active, and e is being pressed
         if (carolineTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = CarolineDetect_car;
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = CarolineDetect_car;
             //Reset touching if she's activated
             resetTouching();
             //Caroline won't proceed until spacebar is pressed and her text is over
