@@ -21,13 +21,15 @@ public class ladder : MonoBehaviour {
         //They pressed up
         if(Input.GetKey("w"))
         {
-            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed);
+            //player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed);
+            player.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1), ForceMode2D.Impulse);
         }
 
         //Go down
         else if(Input.GetKey("s"))
         {
-            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed);
+            // player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed);
+            player.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -1), ForceMode2D.Impulse);
         }
 
         //Anything else, don't move
