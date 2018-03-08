@@ -28,9 +28,8 @@ public class playerControler : MonoBehaviour {
 
     private void handleMovement(float horizontal)
 	{
-		if (grounded) {
 			myRigidbody.velocity = new Vector2 (horizontal * speed, myRigidbody.velocity.y); //x-val -1, y-val 0
-		}
+
 	}
 
 }
