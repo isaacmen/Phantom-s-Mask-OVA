@@ -9,20 +9,18 @@ public class playerControler : MonoBehaviour {
 
     [SerializeField]
     private float speed;
-    private GameObject reader;
 
 	// Use this for initialization
 	void Start () {
         myRigidbody = GetComponent<Rigidbody2D>();
         grounded = true;
-        reader = GameObject.FindGameObjectWithTag("textbox");
-    }
+	}
 	
 	// Update is called once per frame
 	void Update () {
         float horizontal = Input.GetAxis("Horizontal");
         handleMovement(horizontal);
-		if (Input.GetKeyDown("space") && grounded && !reader.GetComponent<ReadText>().active)
+		if (Input.GetKeyDown("up") && grounded)
         {
             myRigidbody.AddForce(new Vector2(0, 6), ForceMode2D.Impulse);
         }
