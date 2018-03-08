@@ -11,7 +11,6 @@ public class fenceCheck : MonoBehaviour {
     private bool carolineTouching = false;
     private bool robbieTouching = false;
 
-
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,7 +18,8 @@ public class fenceCheck : MonoBehaviour {
         {
             if(GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
             {
-                ladder.GetComponent<ladderCheck>().setFenceIsBusted(true);
+                ladder.GetComponent<fenceLadderCheck>().setFenceIsBusted(true);
+        
                 Destroy(gameObject);
             }
         }
@@ -28,7 +28,7 @@ public class fenceCheck : MonoBehaviour {
         {
             if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")
             {
-                ladder.GetComponent<ladderCheck>().setFenceIsBusted(false);
+                ladder.GetComponent<fenceLadderCheck>().setFenceIsBusted(false);
                 Destroy(gameObject);
             }
         }

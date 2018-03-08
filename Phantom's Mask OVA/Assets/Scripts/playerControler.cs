@@ -6,6 +6,7 @@ public class playerControler : MonoBehaviour {
 
     private Rigidbody2D myRigidbody;
     public bool grounded;
+    public bool climbing;
 
     [SerializeField]
     private float speed;
@@ -15,6 +16,7 @@ public class playerControler : MonoBehaviour {
 	void Start () {
         myRigidbody = GetComponent<Rigidbody2D>();
         grounded = true;
+        climbing = false;
         reader = GameObject.FindGameObjectWithTag("textbox");
     }
 	
@@ -25,6 +27,22 @@ public class playerControler : MonoBehaviour {
 		if (Input.GetKeyDown("space") && grounded && !reader.GetComponent<ReadText>().active)
         {
             myRigidbody.AddForce(new Vector2(0, 6), ForceMode2D.Impulse);
+        }
+        handleClimbing();
+    }
+
+    private void handleClimbing()
+    {
+        Debug.Log(climbing);
+        if ((Input.GetAxis("Vertical") > 0) && climbing)
+        {
+            Debug.Log("Up");
+            transform.Translate(0, 5 * Time.deltaTime, 0);
+        }
+        else if ((Input.GetAxis("Vertical") < 0) && climbing)
+        {
+            Debug.Log("Down");
+            transform.Translate(0, -5 * Time.deltaTime, 0);
         }
     }
 
