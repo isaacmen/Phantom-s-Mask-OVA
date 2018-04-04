@@ -732,7 +732,7 @@ Prefab:
     - target: {fileID: 114133626500751936, guid: 9af2f5b06d8cd6442bac2134b513be0a,
         type: 2}
       propertyPath: filename
-      value: Level 1 Start.txt
+      value: testtext.txt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9af2f5b06d8cd6442bac2134b513be0a, type: 2}
@@ -943,7 +943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  level: Chapter1 Level2
+  level: Chapter2 Level2
 --- !u!61 &707443557
 BoxCollider2D:
   m_ObjectHideFlags: 0

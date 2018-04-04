@@ -25,7 +25,6 @@ public class LadderCheck : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Not climbing");
         if (collision.gameObject.CompareTag("ladder"))
         { 
             rb.gravityScale = 1;
