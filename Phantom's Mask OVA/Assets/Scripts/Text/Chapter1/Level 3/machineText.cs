@@ -20,7 +20,7 @@ public class machineText : MonoBehaviour {
     {
         if (robbieTouching && Input.GetKey("e") && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")
         {
-            gameObject.GetComponent<treeText>().enabled = false;
+            gameObject.GetComponent<machineText>().enabled = false;
         }
 
         else if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
@@ -32,7 +32,7 @@ public class machineText : MonoBehaviour {
 
         else if (yvetteTouching && Input.GetKey("e") && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
         {
-            gameObject.GetComponent<treeText>().enabled = false;
+            gameObject.GetComponent<machineText>().enabled = false;
         }
     }
 
