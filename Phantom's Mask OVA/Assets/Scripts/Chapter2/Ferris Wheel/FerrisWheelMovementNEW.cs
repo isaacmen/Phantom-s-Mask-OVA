@@ -6,57 +6,45 @@ public class FerrisWheelMovementNEW : MonoBehaviour
 {
 
     //THE CORRECT ORDER THAT WILL MAKE IT WORK
-    private int[] correctOrder = new int[] { 1, 2, 3, 4, 5 };
-    private int[] playerOrder = new int[] { 0, 0, 0, 0, 0 };
+    public int[] correctOrder = new int[] { 1, 2, 3, 4, 5 };
+    public int[] playerOrder = new int[] { 0, 0, 0, 0, 0 };
     //keeps track of the current button clicked
-    int counter;
+    public int counter = 0;
+    public bool finished = false;
 
 
     void Start() {
         counter = 0;
+        finished = false;
+        playerOrder = new int[] { 0, 0, 0, 0, 0 };
     }
 
     // Update is called once per frame
     void Update ()
     {
-	}
+    }
 
 
     public void setButton(int i)
     {
-        playerOrder[counter] = i;
-        counter += 1;
-        Debug.Log(counter);
-        checkCounter();
-    }
-
-    public void checkCounter()
-    {
-        if (counter > 4)
+        if(finished == false)
         {
-            counter = 0;
-            Debug.Log("------Reset");
-            //printArr();
+            if (counter >= 5)
+            {
+                playerOrder[0] = 0;
+                playerOrder[1] = 0;
+                playerOrder[2] = 0;
+                playerOrder[3] = 0;
+                playerOrder[4] = 0;
+                counter = 0;
+            }
+            playerOrder[counter] = i;
+            ++counter;
         }
     }
-    public bool checkArrayMatch()
+    
+    public void setFinishedTrue()
     {
-        for(int f = 0; f <= 4; f++)
-        {
-            if (correctOrder[f] != playerOrder[f])
-                 return false;
-        }
-        return true;
-    }
-
-
-    public void printArr()
-    {
-        Debug.Log("    --------------");
-        for (int f = 0; f <= 4; f++)
-        {
-           Debug.Log(correctOrder[f] + " ^  " + playerOrder[f]);
-        }
-        Debug.Log("    ---------------");
+        finished = true;
     }
 }
