@@ -56,6 +56,7 @@ public class colorButtonSwap : MonoBehaviour {
             }
         }
         wheel.GetComponent<FerrisWheelMovementNEW>().setFinishedTrue();
+        wheel.GetComponent<FerrisWheelMovementNEW>().changeStayStill(false);
         return true;
     }
 }
