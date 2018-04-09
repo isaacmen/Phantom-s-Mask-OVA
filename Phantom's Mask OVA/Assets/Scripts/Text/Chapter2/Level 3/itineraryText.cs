@@ -5,7 +5,7 @@ using UnityEngine;
 public class itineraryText : MonoBehaviour {
 
 	 //Strings that have the file names
-    private const string itinerary= "Itinerary.txt";
+    private const string itinerary= "Puzzle Diary Entry.txt";
 
     //Checks if Caroline have touched the box already and interacted with it
     private static bool carolineTouch = false;
