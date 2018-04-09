@@ -15,24 +15,32 @@ public class machineText : MonoBehaviour {
     private bool robbieTouching = false;
     private bool yvetteTouching = false;
 
+    //Textbox to read to
+    private GameObject reader;
+
+    void Start()
+    {
+        reader = GameObject.FindGameObjectWithTag("textbox");
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (robbieTouching && Input.GetKey("e") && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")
         {
-            gameObject.GetComponent<machineText>().enabled = false;
+            //gameObject.GetComponent<machineText>().enabled = false;
         }
 
         else if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = TreeCaroline;
+            reader.GetComponent<ReadText>().active = true;
+            reader.GetComponent<ReadText>().filename = TreeCaroline;
             carolineTouch = true;
         }
 
         else if (yvetteTouching && Input.GetKey("e") && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
         {
-            gameObject.GetComponent<machineText>().enabled = false;
+            //gameObject.GetComponent<machineText>().enabled = false;
         }
     }
 

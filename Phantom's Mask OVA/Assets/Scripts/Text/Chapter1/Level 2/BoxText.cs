@@ -19,20 +19,28 @@ public class BoxText : MonoBehaviour {
     private bool carolineTouching = false;
     private bool robbieTouching = false;
     private bool yvetteTouching = false;
-	
-	// Update is called once per frame
-	void Update () {
+
+    //Textbox to read to
+    private GameObject reader;
+
+    void Start()
+    {
+        reader = GameObject.FindGameObjectWithTag("textbox");
+    }
+
+    // Update is called once per frame
+    void Update () {
 		if (robbieTouching && !robbieTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = BoxRobbie;
+            reader.GetComponent<ReadText>().active = true;
+            reader.GetComponent<ReadText>().filename = BoxRobbie;
             robbieTouch = true;
         }
 		
 		else if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = BoxCaroline;
+            reader.GetComponent<ReadText>().active = true;
+            reader.GetComponent<ReadText>().filename = BoxCaroline;
             carolineTouch = true;
         }
 

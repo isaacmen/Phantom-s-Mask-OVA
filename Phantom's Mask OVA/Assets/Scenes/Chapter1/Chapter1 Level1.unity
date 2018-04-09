@@ -498,7 +498,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1322775664365888, guid: 4a84f65e99e870a45a05b19cb23325f1, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114356499882372326, guid: 4a84f65e99e870a45a05b19cb23325f1, type: 2}
@@ -779,7 +779,7 @@ Prefab:
     - target: {fileID: 114133626500751936, guid: 9af2f5b06d8cd6442bac2134b513be0a,
         type: 2}
       propertyPath: filename
-      value: Level 1 Start.txt
+      value: Level 1 Start(2).txt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9af2f5b06d8cd6442bac2134b513be0a, type: 2}
