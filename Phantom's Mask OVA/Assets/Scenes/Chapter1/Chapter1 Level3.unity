@@ -152,6 +152,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 1106675025800448, guid: e501e00c09e4ce94489ad878cf936498, type: 2}
+      propertyPath: m_Name
+      value: Debris
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e501e00c09e4ce94489ad878cf936498, type: 2}
   m_IsPrefabParent: 0
@@ -1410,7 +1414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filename: 
-  pathFolder: Assets/Texts/Chapter1/Object Interactions/
+  pathFolder: Assets/Texts/Chapter1/Level3/
   Displaytext: {fileID: 50724706}
   Textbox: {fileID: 1636728480}
   active: 0
@@ -1442,7 +1446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filename: 
-  pathFolder: Assets/Texts/Chapter1/Object Interactions/
+  pathFolder: Assets/Texts/Chapter1/Level3/
   Displaytext: {fileID: 50724706}
   Textbox: {fileID: 1636728480}
   active: 0

@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class wwpText : MonoBehaviour {
+public class paintingText : MonoBehaviour {
 
 	 //Strings that have the file names
-    private const string painting= "Wonder World Painting.txt";
-
-    //Checks if Caroline have touched the box already and interacted with it
-    private static bool carolineTouch = false;
+    public string painting;
 
     //Checks if they are currently touching the box
     private bool carolineTouching = false;
@@ -18,13 +15,23 @@ public class wwpText : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-      
-        if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
+
+        if (carolineTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
             gameObject.GetComponent<ReadText>().active = true;
             gameObject.GetComponent<ReadText>().filename = painting;
-            carolineTouch = true;
         }
+		else if (robbieTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
+        {
+            gameObject.GetComponent<ReadText>().active = true;
+            gameObject.GetComponent<ReadText>().filename = painting;
+        }
+		if (yvetteTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette" && Input.GetKey("e"))
+        {
+            gameObject.GetComponent<ReadText>().active = true;
+            gameObject.GetComponent<ReadText>().filename = painting;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D player)

@@ -7,8 +7,6 @@ public class itineraryText : MonoBehaviour {
 	 //Strings that have the file names
     private const string itinerary= "Puzzle Diary Entry.txt";
 
-    //Checks if Caroline have touched the box already and interacted with it
-    private static bool carolineTouch = false;
 
     //Checks if they are currently touching the box
     private bool carolineTouching = false;
@@ -18,11 +16,20 @@ public class itineraryText : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
+        if (carolineTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
             gameObject.GetComponent<ReadText>().active = true;
             gameObject.GetComponent<ReadText>().filename = itinerary;
-            carolineTouch = true;
+        }
+		else if (robbieTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
+        {
+            gameObject.GetComponent<ReadText>().active = true;
+            gameObject.GetComponent<ReadText>().filename = itinerary;
+        }
+		if (yvetteTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette" && Input.GetKey("e"))
+        {
+            gameObject.GetComponent<ReadText>().active = true;
+            gameObject.GetComponent<ReadText>().filename = itinerary;
         }
     }
 

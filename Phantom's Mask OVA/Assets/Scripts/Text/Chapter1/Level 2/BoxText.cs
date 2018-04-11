@@ -11,10 +11,6 @@ public class BoxText : MonoBehaviour {
     private const string BoxCaroline = "Box-Caroline.txt";
     private const string BoxRobbie = "Box-Robbie.txt";
 	
-	//Checks if Robbie and Caroline have touched the box already and interacted with it
-    private static bool robbieTouch = false;
-    private static bool carolineTouch = false;
-	
 	//Checks if they are currently touching the box
     private bool carolineTouching = false;
     private bool robbieTouching = false;
@@ -30,18 +26,16 @@ public class BoxText : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		if (robbieTouching && !robbieTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
+		if (robbieTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         {
             reader.GetComponent<ReadText>().active = true;
             reader.GetComponent<ReadText>().filename = BoxRobbie;
-            robbieTouch = true;
         }
 		
-		else if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
+		else if (carolineTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
             reader.GetComponent<ReadText>().active = true;
             reader.GetComponent<ReadText>().filename = BoxCaroline;
-            carolineTouch = true;
         }
 
         else if (yvetteTouching && Input.GetKey("e") && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
@@ -58,7 +52,6 @@ public class BoxText : MonoBehaviour {
 
         //Check if Robbie is touching the box
         else if (player.gameObject.name == "Robbie"){
-			gameObject.GetComponent<ReadText>().filename = BoxRobbie;
             robbieTouching = true;
 			
 		}
