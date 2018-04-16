@@ -4,25 +4,25 @@ using UnityEngine;
 
 /* 
  * This script should be atatched to pushable objects, like boxes and such. 
- * Only Brian can push or pull these objects
+ * Only Chris can push or pull these objects
  */
 public class pushableObjects : MonoBehaviour {
 
-    private float speed = 7;
-    private bool brianTouching = false;
-    private Rigidbody2D myRigidbody;
+    //Has to match Chris' speed
+    public float speed;
+    private bool chrisTouching = false;
 
     void Start()
     {
-        myRigidbody = GetComponent<Rigidbody2D>();
+  
     }
  
     void Update()
     {
         
-      //  if (brianTouching == true  && Input.GetKeyDown("e"))
+      if (chrisTouching == true && Input.GetKey("e"))
        // {
-          if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Brian")
+          if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Chris")
                 HandleMovement();
         
        // }
@@ -30,21 +30,29 @@ public class pushableObjects : MonoBehaviour {
 
     void HandleMovement()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        Debug.Log("WOOOOOO");
-        myRigidbody.velocity = new Vector2(horizontal * speed, myRigidbody.velocity.y);
+            if (Input.GetKey("a"))
+            {
+                transform.Translate(-speed * Time.deltaTime, 0, 0);
+            }
+
+            if (Input.GetKey("d"))
+            {
+                transform.Translate(speed * Time.deltaTime, 0, 0);
+            }
     }
 
     void OnCollisionEnter2D(Collision2D player)
     {
-        if(player.gameObject.name == "Brian")
-             brianTouching = true;
+        if(player.gameObject.name == "Chris")
+             chrisTouching = true;
+        Debug.Log("Touching");
     }
 
     void OnCollisionExit2D(Collision2D player)
     {
-        if (player.gameObject.name == "Brian")
-            brianTouching = false;
+        if (player.gameObject.name == "Chris")
+            chrisTouching = false;
+        Debug.Log("HEYYYY");
     }
 
 
