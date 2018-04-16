@@ -34,12 +34,12 @@ public class playerControler : MonoBehaviour {
     private void handleClimbing()
     {
         Debug.Log(climbing);
-        if ((Input.GetAxis("Vertical") > 0) && climbing)
+        if ((Input.GetKey("w")) && climbing)
         {
             Debug.Log("Up");
             transform.Translate(0, 5 * Time.deltaTime, 0);
         }
-        else if ((Input.GetAxis("Vertical") < 0) && climbing)
+        else if ((Input.GetKey("s")) && climbing)
         {
             Debug.Log("Down");
             transform.Translate(0, -5 * Time.deltaTime, 0);
@@ -48,8 +48,20 @@ public class playerControler : MonoBehaviour {
 
     private void handleMovement(float horizontal)
 	{
-			myRigidbody.velocity = new Vector2 (horizontal * speed, myRigidbody.velocity.y); //x-val -1, y-val 0
+        if (Input.GetKey("d"))
+        {
+            transform.Translate(speed * Time.deltaTime, 0, 0);
+        }
 
-	}
+        if (Input.GetKey("a"))
+        {
+            transform.Translate(-speed * Time.deltaTime, 0, 0);
+        }
+        
+
+
+       // myRigidbody.velocity = new Vector2 (horizontal * speed, myRigidbody.velocity.y); //x-val -1, y-val 0
+
+    }
 
 }

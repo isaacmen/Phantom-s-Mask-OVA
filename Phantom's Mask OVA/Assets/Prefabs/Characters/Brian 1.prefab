@@ -180,7 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grounded: 0
   climbing: 0
-  speed: 7
+  speed: 6
 --- !u!212 &212290206415098790
 SpriteRenderer:
   m_ObjectHideFlags: 1

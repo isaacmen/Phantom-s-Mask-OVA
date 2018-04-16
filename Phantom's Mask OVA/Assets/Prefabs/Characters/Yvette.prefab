@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grounded: 0
   climbing: 0
-  speed: 7
+  speed: 6
 --- !u!114 &114616926590460226
 MonoBehaviour:
   m_ObjectHideFlags: 1

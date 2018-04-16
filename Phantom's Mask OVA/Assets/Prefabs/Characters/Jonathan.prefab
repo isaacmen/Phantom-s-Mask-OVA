@@ -99,7 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829871fc05946724f952765f591d0a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  grounded: 0
+  climbing: 0
+  speed: 6
 --- !u!212 &212148412758910800
 SpriteRenderer:
   m_ObjectHideFlags: 1
