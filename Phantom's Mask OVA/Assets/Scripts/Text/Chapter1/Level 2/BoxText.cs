@@ -11,29 +11,31 @@ public class BoxText : MonoBehaviour {
     private const string BoxCaroline = "Box-Caroline.txt";
     private const string BoxRobbie = "Box-Robbie.txt";
 	
-	//Checks if Robbie and Caroline have touched the box already and interacted with it
-    private static bool robbieTouch = false;
-    private static bool carolineTouch = false;
-	
 	//Checks if they are currently touching the box
     private bool carolineTouching = false;
     private bool robbieTouching = false;
     private bool yvetteTouching = false;
-	
-	// Update is called once per frame
-	void Update () {
-		if (robbieTouching && !robbieTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
+
+    //Textbox to read to
+    private GameObject reader;
+
+    void Start()
+    {
+        reader = GameObject.FindGameObjectWithTag("textbox");
+    }
+
+    // Update is called once per frame
+    void Update () {
+		if (robbieTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = BoxRobbie;
-            robbieTouch = true;
+            reader.GetComponent<ReadText>().active = true;
+            reader.GetComponent<ReadText>().filename = BoxRobbie;
         }
 		
-		else if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
+		else if (carolineTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = BoxCaroline;
-            carolineTouch = true;
+            reader.GetComponent<ReadText>().active = true;
+            reader.GetComponent<ReadText>().filename = BoxCaroline;
         }
 
         else if (yvetteTouching && Input.GetKey("e") && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
@@ -50,7 +52,6 @@ public class BoxText : MonoBehaviour {
 
         //Check if Robbie is touching the box
         else if (player.gameObject.name == "Robbie"){
-			gameObject.GetComponent<ReadText>().filename = BoxRobbie;
             robbieTouching = true;
 			
 		}

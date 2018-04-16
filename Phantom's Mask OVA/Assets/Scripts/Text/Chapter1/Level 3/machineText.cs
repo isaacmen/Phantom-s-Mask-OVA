@@ -5,7 +5,7 @@ using UnityEngine;
 public class machineText : MonoBehaviour {
 
 	 //Strings that have the file names
-    private const string TreeCaroline = "CarolineDetect-Machine.txt";
+    private const string TextCaroline = "CarolineDetect-Machine.txt";
 
     //Checks if Caroline have touched the box already and interacted with it
     private static bool carolineTouch = false;
@@ -18,25 +18,15 @@ public class machineText : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (robbieTouching && Input.GetKey("e") && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")
-        {
-            gameObject.GetComponent<machineText>().enabled = false;
-        }
-
-        else if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
+        if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
             gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = TreeCaroline;
+            gameObject.GetComponent<ReadText>().filename = TextCaroline;
             carolineTouch = true;
-        }
-
-        else if (yvetteTouching && Input.GetKey("e") && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
-        {
-            gameObject.GetComponent<machineText>().enabled = false;
         }
     }
 
-    void OnCollisionEnter2D(Collision2D player)
+    private void OnTriggerEnter2D(Collider2D player)
     {
         //Check if Caroline is touching the car
         if (player.gameObject.name == "Caroline")
@@ -50,7 +40,7 @@ public class machineText : MonoBehaviour {
             yvetteTouching = true;
     }
 
-    private void OnCollisionExit2D(Collision2D player)
+    private void OnTriggerExit2D(Collider2D player)
     {
         //Check if Caroline is touching the car
         if (player.gameObject.name == "Caroline")

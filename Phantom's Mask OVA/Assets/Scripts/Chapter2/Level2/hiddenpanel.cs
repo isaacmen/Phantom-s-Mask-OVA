@@ -5,12 +5,14 @@ using UnityEngine;
 public class hiddenpanel : MonoBehaviour {
 
 	public bool hidden = true;
-	public bool active;
+    public bool found = false;
+    public bool active;
 	public GameObject left = null;
 	public GameObject right = null;
 
 	public Sprite OnSprite;
 	public Sprite OffSprite;
+    public Sprite FoundSprite;
 
 	private bool yvetteTouching = false;
 	private bool robbieTouching = false;
@@ -18,14 +20,18 @@ public class hiddenpanel : MonoBehaviour {
 
 	private bool timeron = false;
 	private int bullshittimer = 0;
+    private int bullshitcounter = 0;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    //Textbox to read to
+    private GameObject reader;
+
+    void Start()
+    {
+        reader = GameObject.FindGameObjectWithTag("textbox");
+    }
+
+    // Update is called once per frame
+    void Update () {
 		if (timeron) {
 			bullshittimer++;
 		}
@@ -36,11 +42,28 @@ public class hiddenpanel : MonoBehaviour {
 
 		ChangeSprite ();
 
-		if (carolineTouching && Input.GetKey ("e")) {
-			hidden = false;
-		}
+		if (carolineTouching && Input.GetKey ("e") && hidden) {
+            reader.GetComponent<ReadText>().active = true;
+            reader.GetComponent<ReadText>().filename = "CarolinePanelInteraction.txt";
+            hidden = false;
+            found = true;
+        }
 
-		if (!hidden && robbieTouching && Input.GetKey ("e")) {
+        if (left.GetComponent<hiddenpanel>().found == true || right.GetComponent<hiddenpanel>().found == true)
+        {
+            if (bullshitcounter == 0)
+            {
+                hidden = false;
+                found = true;
+            }
+        }
+
+        if (yvetteTouching && Input.GetKey("e") && !hidden && found)
+        {
+            bullshitcounter++;
+        }
+
+        if (!hidden && found && robbieTouching && Input.GetKey ("e")) {
 			ChangeStatus ();
 		}
 	}
@@ -55,18 +78,19 @@ public class hiddenpanel : MonoBehaviour {
 			if (right != null) {
 				right.GetComponent<hiddenpanel>().active = !right.GetComponent<hiddenpanel>().active;
 			}
-
 			timeron = true;
 		}
 	}
 
 	// checks status of panel and changes sprite accordingly
 	void ChangeSprite () {
-		if (!hidden && active) {
+		if (!hidden && found && active && bullshitcounter != 0) {
 			gameObject.GetComponent<SpriteRenderer> ().sprite = OnSprite;
-		} else if (!hidden && !active) {
+		} else if (!hidden && found && !active && bullshitcounter != 0) {
 			gameObject.GetComponent<SpriteRenderer>().sprite = OffSprite;
-		}
+		} else if (!hidden && found) {
+            gameObject.GetComponent<SpriteRenderer>().sprite = FoundSprite;
+        }
 	}
 
 

@@ -265,9 +265,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 144945164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f935913d58e0934394cab914de259a6, type: 3}
+  m_Script: {fileID: 11500000, guid: cf3644e0fcc10164a8984a39709a3390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painting: Hall of Mirrors Painting.txt
 --- !u!114 &144945168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,9 +952,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 420143692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da91f1c9a075cce488479a272782d4cd, type: 3}
+  m_Script: {fileID: 11500000, guid: cf3644e0fcc10164a8984a39709a3390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painting: Haunted House Painting.txt
 --- !u!114 &420143696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,9 +1157,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 569290698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 326880886f06da84893eaf52a5f60315, type: 3}
+  m_Script: {fileID: 11500000, guid: cf3644e0fcc10164a8984a39709a3390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painting: Ferris Wheel Painting.txt
 --- !u!114 &569290702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1454,9 +1457,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 643032077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 028d13be4dd80394a913dfadb4542866, type: 3}
+  m_Script: {fileID: 11500000, guid: cf3644e0fcc10164a8984a39709a3390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painting: Wonder World Painting.txt
 --- !u!114 &643032081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2086,9 +2090,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1822255171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d023443f042a5d345a88a2314685312c, type: 3}
+  m_Script: {fileID: 11500000, guid: cf3644e0fcc10164a8984a39709a3390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painting: Roller Coaster Painting.txt
 --- !u!114 &1822255175
 MonoBehaviour:
   m_ObjectHideFlags: 0
