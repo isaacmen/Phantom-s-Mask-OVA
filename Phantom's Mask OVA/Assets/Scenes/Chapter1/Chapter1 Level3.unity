@@ -1284,6 +1284,38 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8241d887731d037459515d912bc7600c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1802888430 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1106675025800448, guid: e501e00c09e4ce94489ad878cf936498,
+    type: 2}
+  m_PrefabInternal: {fileID: 942160}
+--- !u!114 &1802888435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1802888430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978c95e7ce1cf3f49b3c304257a9557c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1802888436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1802888430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4c6d219cd02be41b5002dd02250347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filename: 
+  pathFolder: Assets/Texts/Chapter1/Level3/
+  Displaytext: {fileID: 50724706}
+  Textbox: {fileID: 1636728480}
+  active: 0
 --- !u!1 &1845758430
 GameObject:
   m_ObjectHideFlags: 0

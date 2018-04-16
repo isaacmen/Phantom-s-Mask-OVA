@@ -5,10 +5,9 @@ using UnityEngine;
 public class hiddenDoorText : MonoBehaviour {
 
 	 //Strings that have the file names
-    private const string TreeCaroline = "CarolineDetect-HiddenDoor.txt";
+    private const string TextCaroline = "CarolineDebris.txt";
+	private const string TextRobbie = "RobbieDebris.txt";
 
-    //Checks if Caroline have touched the box already and interacted with it
-    private static bool carolineTouch = false;
 
     //Checks if they are currently touching the box
     private bool carolineTouching = false;
@@ -20,28 +19,25 @@ public class hiddenDoorText : MonoBehaviour {
     {
         if (robbieTouching && Input.GetKey("e") && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")
         {
-            gameObject.GetComponent<treeText>().enabled = false;
+            gameObject.GetComponent<ReadText>().active = true;
+            gameObject.GetComponent<ReadText>().filename = TextRobbie;
         }
 
-        else if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
+        else if (carolineTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
             gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = TreeCaroline;
-            carolineTouch = true;
+            gameObject.GetComponent<ReadText>().filename = TextCaroline;
         }
 
-        else if (yvetteTouching && Input.GetKey("e") && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
-        {
-            gameObject.GetComponent<treeText>().enabled = false;
-        }
     }
 
     void OnCollisionEnter2D(Collision2D player)
     {
         //Check if Caroline is touching the car
-        if (player.gameObject.name == "Caroline")
+        if (player.gameObject.name == "Caroline"){
             carolineTouching = true;
-
+			Debug.Log ("CARO TOUCHING");
+		}
         //Check if Robbie is touching the car
         else if (player.gameObject.name == "Robbie")
             robbieTouching = true;
