@@ -26,25 +26,35 @@ public class BoxText : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		if (robbieTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
+		if (robbieTouching && GameObject.Find("Playercontroller").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         {
             reader.GetComponent<ReadText>().active = true;
             reader.GetComponent<ReadText>().filename = BoxRobbie;
         }
 		
-		else if (carolineTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
+		else if (carolineTouching && GameObject.Find("Playercontroller").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
             reader.GetComponent<ReadText>().active = true;
             reader.GetComponent<ReadText>().filename = BoxCaroline;
         }
 
-        else if (yvetteTouching && Input.GetKey("e") && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
+        else if (yvetteTouching && Input.GetKey("e") && GameObject.Find("Playercontroller").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
         {
             gameObject.GetComponent<BoxText>().enabled = false;
         }
+
+        
+        if(robbieTouching && Input.GetKey("e") && GameObject.Find("Playercontroller").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")
+        {
+            Debug.Log("dicks");
+
+            reader.GetComponent<ReadText>().active = true;
+            reader.GetComponent<ReadText>().filename = BoxRobbie;
+        }
+        
 	}
 	
-	void OnCollisionEnter2D(Collision2D player)
+	void OnTriggerEnter2D(Collider2D player)
     {
         //Check if Caroline is touching the box
         if (player.gameObject.name == "Caroline")
@@ -53,22 +63,24 @@ public class BoxText : MonoBehaviour {
         //Check if Robbie is touching the box
         else if (player.gameObject.name == "Robbie"){
             robbieTouching = true;
-			
+            //Debug.Log("fuck");
 		}
 
         else if (player.gameObject.name == "Yvette")
             yvetteTouching = true;
     }
-	
-	private void OnCollisionExit2D(Collision2D player)
+
+    private void OnTriggerExit2D(Collider2D player)
     {
         //Check if Caroline is touching the box
         if (player.gameObject.name == "Caroline")
             carolineTouching = false;
 
         //Check if Robbie is touching the box
-        else if (player.gameObject.name == "Robbie")
-            robbieTouching = false;
+        else if (player.gameObject.name == "Robbie") { 
+        robbieTouching = false;
+            Debug.Log("shit");
+        }
 
         //Check if Yvette is touching the box
         else if (player.gameObject.name == "Yvette")

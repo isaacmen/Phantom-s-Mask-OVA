@@ -33,7 +33,7 @@ public class playerControler : MonoBehaviour {
 
     private void handleClimbing()
     {
-        Debug.Log(climbing);
+        //Debug.Log(climbing);
         if ((Input.GetKey("w")) && climbing)
         {
             Debug.Log("Up");

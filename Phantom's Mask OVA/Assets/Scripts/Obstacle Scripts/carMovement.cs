@@ -48,7 +48,9 @@ public class carMovement : MonoBehaviour {
 
         //Check if everyone is in the car and if the car is not touching the tree. If they are, the car can move
         if (inCar() == true && canMove == true)
-           carMove();
+            this.GetComponent<changeScene>().enabled = true;
+            this.GetComponent<changeScene>().active = true;
+           //carMove();
     }
 
     private void OnTriggerEnter2D(Collider2D cplayer)
