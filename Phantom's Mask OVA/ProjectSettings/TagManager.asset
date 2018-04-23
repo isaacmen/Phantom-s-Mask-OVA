@@ -46,6 +46,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: PushableBox
+    uniqueID: 3047677077
+    locked: 0
   - name: BackgroundPlayer
     uniqueID: 3449337875
     locked: 0
