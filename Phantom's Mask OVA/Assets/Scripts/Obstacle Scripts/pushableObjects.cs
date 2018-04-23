@@ -45,14 +45,12 @@ public class pushableObjects : MonoBehaviour {
     {
         if(player.gameObject.name == "Chris")
              chrisTouching = true;
-        Debug.Log("Touching");
     }
 
     void OnCollisionExit2D(Collision2D player)
     {
         if (player.gameObject.name == "Chris")
             chrisTouching = false;
-        Debug.Log("HEYYYY");
     }
 
 
