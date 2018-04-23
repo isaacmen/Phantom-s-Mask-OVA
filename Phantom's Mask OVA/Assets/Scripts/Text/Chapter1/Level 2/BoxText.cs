@@ -28,6 +28,8 @@ public class BoxText : MonoBehaviour {
     void Update () {
 		if (robbieTouching && GameObject.Find("Playercontroller").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         {
+            Debug.Log("dicks");
+
             reader.GetComponent<ReadText>().active = true;
             reader.GetComponent<ReadText>().filename = BoxRobbie;
         }
@@ -44,17 +46,11 @@ public class BoxText : MonoBehaviour {
         }
 
         
-        if(robbieTouching && Input.GetKey("e") && GameObject.Find("Playercontroller").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")
-        {
-            Debug.Log("dicks");
-
-            reader.GetComponent<ReadText>().active = true;
-            reader.GetComponent<ReadText>().filename = BoxRobbie;
-        }
+       
         
 	}
 	
-	void OnTriggerEnter2D(Collider2D player)
+	void OnCollisionEnter2D(Collision2D player)
     {
         //Check if Caroline is touching the box
         if (player.gameObject.name == "Caroline")
@@ -70,7 +66,7 @@ public class BoxText : MonoBehaviour {
             yvetteTouching = true;
     }
 
-    private void OnTriggerExit2D(Collider2D player)
+    private void OnCollisionExit2D(Collision2D player)
     {
         //Check if Caroline is touching the box
         if (player.gameObject.name == "Caroline")

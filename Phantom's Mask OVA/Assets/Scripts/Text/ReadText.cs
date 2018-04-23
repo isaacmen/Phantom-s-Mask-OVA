@@ -46,6 +46,7 @@ public class ReadText : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (active) {
+
             getlines();
 
 			if (currentline == 0)
