@@ -854,12 +854,12 @@ Prefab:
     - target: {fileID: 114133626500751936, guid: 9af2f5b06d8cd6442bac2134b513be0a,
         type: 2}
       propertyPath: pathFolder
-      value: Assets/Texts/Chapter1/Level1/
+      value: Assets/Texts/Chapter 3/Level 2/
       objectReference: {fileID: 0}
     - target: {fileID: 114133626500751936, guid: 9af2f5b06d8cd6442bac2134b513be0a,
         type: 2}
       propertyPath: filename
-      value: testtext.txt
+      value: Level 2 Start.txt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9af2f5b06d8cd6442bac2134b513be0a, type: 2}
@@ -1123,6 +1123,8 @@ GameObject:
   - component: {fileID: 1332097550}
   - component: {fileID: 1332097553}
   - component: {fileID: 1332097552}
+  - component: {fileID: 1332097556}
+  - component: {fileID: 1332097555}
   - component: {fileID: 1332097554}
   m_Layer: 0
   m_Name: placeholderpushable
@@ -1245,6 +1247,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.19, y: 4.22}
   m_EdgeRadius: 0
+--- !u!114 &1332097555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1332097549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde9e61fe2afe9f4f819f87eb89c12a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1332097556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1332097549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4c6d219cd02be41b5002dd02250347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filename: 
+  pathFolder: Assets/Texts/Chapter 3/Level 1/
+  Displaytext: {fileID: 50724706}
+  Textbox: {fileID: 1636728480}
+  active: 0
 --- !u!1 &1445109322
 GameObject:
   m_ObjectHideFlags: 0
