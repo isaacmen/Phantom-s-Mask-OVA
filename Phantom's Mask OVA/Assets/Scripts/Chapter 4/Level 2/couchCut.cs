@@ -22,6 +22,7 @@ public class couchCut : MonoBehaviour {
             {
 			gameObject.GetComponent<Renderer>().enabled = true;
 			isInvisible = false;
+			broken = true;
 			}
 			
 		}
