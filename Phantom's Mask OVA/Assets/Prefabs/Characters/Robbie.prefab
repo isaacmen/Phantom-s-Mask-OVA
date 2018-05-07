@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 212216426148737296}
   - component: {fileID: 61964741084485444}
   - component: {fileID: 50602038977241112}
-  - component: {fileID: 114741573872845332}
   m_Layer: 8
   m_Name: Robbie
   m_TagString: character
@@ -57,8 +56,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1211722785232474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.8229823, y: -3.9200003, z: -0.036714688}
-  m_LocalScale: {x: 1, y: 0.9249998, z: 1}
+  m_LocalPosition: {x: -1.43, y: -2.67, z: 0.64}
+  m_LocalScale: {x: 0.88587856, y: 0.8394094, z: 1}
   m_Children:
   - {fileID: 4757639340084336}
   m_Father: {fileID: 0}
@@ -156,20 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0327593d498e5b94b895e8e847a9394e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114741573872845332
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1211722785232474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 829871fc05946724f952765f591d0a9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grounded: 0
-  climbing: 0
-  speed: 6
 --- !u!212 &212216426148737296
 SpriteRenderer:
   m_ObjectHideFlags: 1

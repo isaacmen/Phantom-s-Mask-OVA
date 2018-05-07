@@ -18,6 +18,8 @@ public class LadderCheck : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ladder"))
         {
+            rb.velocity = Vector3.zero;
+            rb.Sleep();
             rb.gravityScale = 0;
             player.climbing = true;
         }
