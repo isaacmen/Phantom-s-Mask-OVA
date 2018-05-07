@@ -1,0 +1,5 @@
+Robbie: "Hey Caroline, show me that piece of paper you found."
+Caroline: "It just has 0's and 1's on it, do you know what it means?"
+Robbie: "It might be binary, let me try the code."
+*click*
+Robbie: "Hey, look at that!"
