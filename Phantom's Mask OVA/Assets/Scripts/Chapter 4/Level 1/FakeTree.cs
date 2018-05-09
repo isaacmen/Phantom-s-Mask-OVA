@@ -20,18 +20,22 @@ public class FakeTree : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (robbieTouching && Input.GetKey ("e") && !carolineTouched) {
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = "Robbie Tree (not mechanical).txt";
+		}
+
 		if (carolineTouching && Input.GetKey ("e") && !carolineTouched) {
-			//reader.GetComponent<ReadText>().active = true;
-			//reader.GetComponent<ReadText>().filename = "CarolinePanelInteraction.txt";
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = "Caroline Tree.txt";
 			carolineTouched = true;
-			Debug.Log("this a fake tree");
 		}
 
 		if (robbieTouching && Input.GetKey ("e") && carolineTouched) {
-			//reader.GetComponent<ReadText>().active = true;
-			//reader.GetComponent<ReadText>().filename = "CarolinePanelInteraction.txt";
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = "Robbie Tree (mechanical).txt";
 			carolineTouched = true;
-			Debug.Log("lemme turn this on");
 			ladder.SetActive(true);
 		}
 	}
@@ -40,8 +44,10 @@ public class FakeTree : MonoBehaviour {
 	{
 		if (player.name == "Caroline") {
 			carolineTouching = true;
+			robbieTouching = false;
 		} else if (player.name == "Robbie") {
 			robbieTouching = true;
+			carolineTouching = false;
 		} 
 	}
 

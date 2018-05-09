@@ -11,6 +11,7 @@ public class Trashcan : MonoBehaviour {
 
 	private GameObject reader;
 
+
 	// Use this for initialization
 	void Start () {
 		reader = GameObject.FindGameObjectWithTag("textbox");
@@ -19,10 +20,9 @@ public class Trashcan : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (carolineTouching && Input.GetKey ("e")) {
-			//reader.GetComponent<ReadText>().active = true;
-			//reader.GetComponent<ReadText>().filename = "CarolinePanelInteraction.txt";
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = "Trashcan Caroline.txt";
 			roofdoor.GetComponent<RoofDoor>().hasCode = true;
-			Debug.Log("what's this paper");
 		}
 	}
 
