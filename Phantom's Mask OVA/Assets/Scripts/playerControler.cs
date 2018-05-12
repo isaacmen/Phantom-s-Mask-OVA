@@ -7,6 +7,7 @@ public class playerControler : MonoBehaviour {
     private Rigidbody2D myRigidbody;
     public bool grounded;
     public bool climbing;
+	private Animator animator;
 
     [SerializeField]
     private float speed;
@@ -18,6 +19,8 @@ public class playerControler : MonoBehaviour {
         grounded = true;
         climbing = false;
         reader = GameObject.FindGameObjectWithTag("textbox");
+		animator = this.GetComponent<Animator>();
+		
     }
 	
 	// Update is called once per frame
@@ -51,11 +54,13 @@ public class playerControler : MonoBehaviour {
         if (Input.GetKey("d"))
         {
             transform.Translate(speed * Time.deltaTime, 0, 0);
+			animator.SetInteger("Direction", 0);
         }
 
         if (Input.GetKey("a"))
         {
             transform.Translate(-speed * Time.deltaTime, 0, 0);
+			animator.SetInteger("Direction", 1);
         }
         
 
