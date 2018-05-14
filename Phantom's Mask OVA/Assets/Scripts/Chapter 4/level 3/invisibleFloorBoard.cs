@@ -33,6 +33,7 @@ public class invisibleFloorBoard : MonoBehaviour {
         {
             if (GameObject.Find("PlayerController").GetComponent<controlPlayerActive>().isActiveName() == "Caroline")
             {
+                GameObject.Find("TextScripts").GetComponent<Ch4Lvl3Text>().CarolineFoundFloorboard();
                 GetComponent<Renderer>().enabled = true;
                 floorIsVisible = true;
             }
@@ -45,6 +46,7 @@ public class invisibleFloorBoard : MonoBehaviour {
             if (GameObject.Find("PlayerController").GetComponent<controlPlayerActive>().isActiveName() == "Veronica")
             {
                 //Key recieved, can open cabinet now.
+                GameObject.Find("TextScripts").GetComponent<Ch4Lvl3Text>().VeronicaPryFloorboard();
                 GameObject.Find("Cabinet").GetComponent<openCabinet>().SetVeronicaFoundKey();
             }
         }
