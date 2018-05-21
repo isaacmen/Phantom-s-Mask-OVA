@@ -6,8 +6,8 @@ public class RoofDoor : MonoBehaviour {
 
 	public bool hasCode = false;
 
-	private bool carolineTouching = false;
-	private bool robbieTouching = false;
+	private bool touching = false;
+	private bool moveon = false;
 
 	private GameObject reader;
 
@@ -18,35 +18,30 @@ public class RoofDoor : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (robbieTouching && Input.GetKey ("e") && !hasCode) {
-			//reader.GetComponent<ReadText>().active = true;
-			//reader.GetComponent<ReadText>().filename = "CarolinePanelInteraction.txt";
-			Debug.Log("i cant get in");
+		if (touching && Input.GetKey ("e") && !hasCode) {
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = "Roofdoor without code.txt";
 		}
 
-		if (robbieTouching && Input.GetKey ("e") && hasCode) {
-			//reader.GetComponent<ReadText>().active = true;
-			//reader.GetComponent<ReadText>().filename = "CarolinePanelInteraction.txt";
-			Debug.Log("lemme turn this on");
+		if (touching && Input.GetKey ("e") && hasCode) {
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = "Roofdoor with code.txt";
+
+			moveon = true;
+		}
+
+		if (moveon && reader.GetComponent<ReadText>().active == false) {
 			GetComponentInChildren<changeScene>().active = true;
 		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D player)
 	{
-		if (player.name == "Caroline") {
-			carolineTouching = true;
-		} else if (player.name == "Robbie") {
-			robbieTouching = true;
-		} 
+		touching = true;
 	}
 
 	private void OnTriggerExit2D(Collider2D player)
 	{
-		if (player.name == "Caroline") {
-			carolineTouching = false;
-		} else if (player.name == "Robbie") {
-			robbieTouching = false;
-		} 
+		touching = false;
 	}
 }

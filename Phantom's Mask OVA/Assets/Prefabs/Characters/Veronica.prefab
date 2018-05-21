@@ -151,7 +151,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1744944612930518}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 829871fc05946724f952765f591d0a9e, type: 3}
   m_Name: 
@@ -212,8 +212,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -845629421
-  m_SortingLayer: 2
+  m_SortingLayerID: 935375747
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d81f080eaee085547b7fcb26cc0de894, type: 3}
   m_Color: {r: 0, g: 0.21379304, b: 1, a: 1}
