@@ -248,12 +248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429c830934e9e1940b3843090adaf23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caroline: {fileID: 1465739683}
-  robbie: {fileID: 1060016179}
-  yvette: {fileID: 636041143}
-  brian: {fileID: 1930607164}
-  veronica: {fileID: 2123198584}
-  controller: {fileID: 1173681218}
 --- !u!1 &69660476
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +982,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3e69260d5b0a5fe42ba5a310f2995371, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b38ecaa00224bb6489d0d8b1b719f8d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1011,11 +1005,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &636041143 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1202466293492416, guid: f6173d9f38b03ac4e90374e9794a9a8f,
-    type: 2}
-  m_PrefabInternal: {fileID: 32568616}
 --- !u!4 &636041148 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4203955726456846, guid: f6173d9f38b03ac4e90374e9794a9a8f,
@@ -1536,12 +1525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1605cfe3f7688c0488e98181afff2aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1: {fileID: 2123198584}
-  p2: {fileID: 1465739683}
-  p3: {fileID: 1060016179}
-  p4: {fileID: 1930607164}
-  p5: {fileID: 636041143}
-  isActive: {fileID: 0}
 --- !u!4 &1173681220
 Transform:
   m_ObjectHideFlags: 0
@@ -1795,7 +1778,7 @@ SpriteRenderer:
   m_Size: {x: 1.84, y: 2.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &1313558869
 Transform:
@@ -1976,11 +1959,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 22.757824, y: 0.25460148}
   m_EdgeRadius: 0
---- !u!1 &1465739683 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1748476952796998, guid: 667ee790878f2b847815f7e4c47ee701,
-    type: 2}
-  m_PrefabInternal: {fileID: 1105360039}
 --- !u!4 &1465739688 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4264702922622076, guid: 667ee790878f2b847815f7e4c47ee701,
@@ -2551,11 +2529,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.6719208}
   m_EdgeRadius: 0
---- !u!1 &1930607164 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1321640743497602, guid: 352066f460dffc44583d31a8afaccbe2,
-    type: 2}
-  m_PrefabInternal: {fileID: 1628312951}
 --- !u!4 &1930607169 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4190969339072434, guid: 352066f460dffc44583d31a8afaccbe2,
@@ -2848,13 +2821,8 @@ SpriteRenderer:
   m_Size: {x: 0.89, y: 0.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
---- !u!1 &2123198584 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1744944612930518, guid: 8db8b16570aafdb4da1c613d6bb535b7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1555876893}
 --- !u!4 &2123198589 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4222132947326804, guid: 8db8b16570aafdb4da1c613d6bb535b7,
