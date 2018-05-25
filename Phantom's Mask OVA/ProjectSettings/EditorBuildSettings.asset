@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Chapter1/Chapter1 Prologue.unity
+    guid: a8990ec336a1ee14f8426ad1b9dad788
+  - enabled: 1
     path: Assets/Scenes/Chapter1/Chapter1 Level1.unity
     guid: e95d2d2c0f609b0479b8fc49b949b122
   - enabled: 1
@@ -14,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter1/Chapter1 Level3.unity
     guid: 243a0957ef25c98478a02badcbadea28
+  - enabled: 1
+    path: Assets/Scenes/Chapter2/Chapter2 Prologue.unity
+    guid: ec4a9cedac8e31d4889de62da4dfa3d2
   - enabled: 1
     path: Assets/Scenes/Chapter2/Chapter2 Level1.unity
     guid: 6fecffd89d34c9d4aba2526dc4c53e75
@@ -44,3 +50,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter4/Chapter4 Level3.unity
     guid: eb426a3cc6f08ba42b063282f422d533
+  m_configObjects: {}
