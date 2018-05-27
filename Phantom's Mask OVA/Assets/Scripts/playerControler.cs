@@ -27,7 +27,7 @@ public class playerControler : MonoBehaviour {
 	void Update () {
         float horizontal = Input.GetAxis("Horizontal");
         handleMovement(horizontal);
-		if (Input.GetKeyDown("space") && grounded && !reader.GetComponent<ReadText>().active)
+		if (Input.GetKeyDown("space") && grounded)
             myRigidbody.AddForce(new Vector2(0, 6), ForceMode2D.Impulse);
         handleClimbing();
     }
@@ -37,12 +37,10 @@ public class playerControler : MonoBehaviour {
         //Debug.Log(climbing);
         if ((Input.GetKey("w")) && climbing)
         {
-            Debug.Log("Up");
             transform.Translate(0, 5 * Time.deltaTime, 0);
         }
         else if ((Input.GetKey("s")) && climbing)
         {
-            Debug.Log("Down");
             transform.Translate(0, -5 * Time.deltaTime, 0);
         }
     }

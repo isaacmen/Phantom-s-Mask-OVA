@@ -56,6 +56,7 @@ public class ReadTextLvl5 : MonoBehaviour
             if (currentline == 0)
             {
                 Displaytext.text = lines[currentline];
+                GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive5people>().enabled = false;
                 currentline++;
             }
 

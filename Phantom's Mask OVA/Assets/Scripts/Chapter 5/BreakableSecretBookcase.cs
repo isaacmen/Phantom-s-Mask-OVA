@@ -2,73 +2,69 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BreakBathroomMirror : MonoBehaviour {
-    private bool isBreakable;
+public class BreakableSecretBookcase : MonoBehaviour {
+
+    //Whether Yvette is touching this object or not
+    private bool breakable;
     private bool yvetteTouching;
     private bool christopherTouching;
     private bool carolineTouching;
     private bool veronicaTouching;
     private bool robbieTouching;
-    public GameObject lever;
 
-
-	// Use this for initialization
-	void Start () {
-        isBreakable = false;
+    // Use this for initialization
+    void Start()
+    {
+        breakable = false;
         yvetteTouching = false;
-        lever.GetComponent<Renderer>().enabled= false;
-        lever.GetComponent<BoxCollider2D>().enabled = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         string currentlyActive = GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive5people>().isActiveName();
-        if (!isBreakable && Input.GetKey("e"))
+        if (!breakable)
         {
-            if (yvetteTouching && (currentlyActive.Equals("Yvette")))
-                GameObject.Find("LevelText").GetComponent<Lvl5Text>().MirrorInteract("Yvette (No Painting)");
+            if (yvetteTouching && (currentlyActive.Equals("Yvette")) && Input.GetKey("e"))
+                GameObject.Find("LevelText").GetComponent<Lvl5Text>().SecretBookcaseInteract("Yvette (No Painting)");
             interactions(currentlyActive);
         }
-        if (isBreakable)
-            checkYvetteTouching(currentlyActive);
+        if(breakable)
+            checkObjectBroke(currentlyActive);
     }
 
-    void interactions(string currentlyActive)
+    private void interactions(string currentlyActive)
     {
         if (Input.GetKey("e"))
         {
             if (christopherTouching && (currentlyActive.Equals("Brian")))
-                GameObject.Find("LevelText").GetComponent<Lvl5Text>().MirrorInteract("Christopher");
+                GameObject.Find("LevelText").GetComponent<Lvl5Text>().SecretBookcaseInteract("Christopher");
             else if (carolineTouching && (currentlyActive.Equals("Caroline")))
-                GameObject.Find("LevelText").GetComponent<Lvl5Text>().MirrorInteract("Caroline");
+                GameObject.Find("LevelText").GetComponent<Lvl5Text>().SecretBookcaseInteract("Caroline");
             else if (veronicaTouching && (currentlyActive.Equals("Veronica")))
-                GameObject.Find("LevelText").GetComponent<Lvl5Text>().MirrorInteract("Veronica");
+                GameObject.Find("LevelText").GetComponent<Lvl5Text>().SecretBookcaseInteract("Veronica");
             else if (robbieTouching && (currentlyActive.Equals("Robbie")))
-                GameObject.Find("LevelText").GetComponent<Lvl5Text>().MirrorInteract("Robbie");
+                GameObject.Find("LevelText").GetComponent<Lvl5Text>().SecretBookcaseInteract("Robbie");
         }
     }
 
-    void checkYvetteTouching(string activeName)
+    public void isBreakable()
     {
-        interactions(activeName);
-        if (yvetteTouching && Input.GetKey("e"))
+        breakable = true;
+    }
+    public void checkObjectBroke(string currentlyActive)
+    {
+        interactions(currentlyActive);
+        if (yvetteTouching == true && Input.GetKey("e"))
         {
-            if (activeName.Equals("Yvette"))
+            if (currentlyActive == "Yvette")
             {
-                // Activate the renderer for the lever
-                lever.GetComponent<Renderer>().enabled = true;
-                lever.GetComponent<BoxCollider2D>().enabled = true;
-                //Show the text
-                GameObject.Find("LevelText").GetComponent<Lvl5Text>().MirrorInteract("Yvette");
+                //GameObject.Find("LevelText").GetComponent<Lvl5Text>().SecretBookcaseInteract("Yvette");
                 Destroy(gameObject);
             }
         }
     }
 
-    public void paintingSeen()
-    {
-        isBreakable = true;
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

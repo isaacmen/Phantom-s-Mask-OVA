@@ -6,10 +6,12 @@ public class BreakableHalfBookcase : MonoBehaviour {
 
     //Whether Yvette is touching this object or not
     private bool yvetteTouching;
+    private bool isBreakable;
 
     // Use this for initialization
     void Start()
     {
+        isBreakable = false;
         yvetteTouching = false;
         //Disable the renderer
         gameObject.GetComponent<Renderer>().enabled = false;
@@ -20,7 +22,8 @@ public class BreakableHalfBookcase : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        checkObjectBroke();
+        if(isBreakable)
+            checkObjectBroke();
     }
 
     public void checkObjectBroke()
@@ -35,6 +38,11 @@ public class BreakableHalfBookcase : MonoBehaviour {
             }
 
         }
+    }
+
+    public void breakBookcase()
+    {
+        isBreakable = true;
     }
 
 
