@@ -19,7 +19,7 @@ public class playerControler : MonoBehaviour {
         grounded = true;
         climbing = false;
         reader = GameObject.FindGameObjectWithTag("textbox");
-		animator = this.GetComponent<Animator>();
+		//animator = this.GetComponent<Animator>();
 		
     }
 	
@@ -50,16 +50,16 @@ public class playerControler : MonoBehaviour {
         if (Input.GetKey("d"))
         {
             transform.Translate(speed * Time.deltaTime, 0, 0);
-			animator.SetInteger("Direction", 1);
+			//animator.SetInteger("Direction", 1);
         }
 
         else if (Input.GetKey("a"))
         {
             transform.Translate(-speed * Time.deltaTime, 0, 0);
-			animator.SetInteger("Direction", 2);
+			//animator.SetInteger("Direction", 2);
         }
 		else{
-			animator.SetInteger("Direction", 0);
+			//animator.SetInteger("Direction", 0);
 		}
         
 

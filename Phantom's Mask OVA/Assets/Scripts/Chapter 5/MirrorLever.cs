@@ -20,7 +20,7 @@ public class MirrorLever : MonoBehaviour {
             if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive5people>().isActiveName() == "Robbie")
             {
                 //Turn on the altar
-                Debug.Log("GOT IT");
+                GameObject.Find("Altars").GetComponent<AltarController>().activateAltar(1);
                 leverIsTriggered = false;
             }
         }

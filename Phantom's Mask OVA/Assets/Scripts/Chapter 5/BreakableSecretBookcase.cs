@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BreakableSecretBookcase : MonoBehaviour {
-
+    //The sull behind it
+    public GameObject skull;
     //Whether Yvette is touching this object or not
     private bool breakable;
     private bool yvetteTouching;
@@ -55,11 +56,12 @@ public class BreakableSecretBookcase : MonoBehaviour {
     public void checkObjectBroke(string currentlyActive)
     {
         interactions(currentlyActive);
-        if (yvetteTouching == true && Input.GetKey("e"))
+        if (yvetteTouching == true && Input.GetKeyUp("e"))
         {
             if (currentlyActive == "Yvette")
             {
                 //GameObject.Find("LevelText").GetComponent<Lvl5Text>().SecretBookcaseInteract("Yvette");
+                skull.GetComponent<RobbieActivateSkull7>().bookcaseBroke();
                 Destroy(gameObject);
             }
         }
