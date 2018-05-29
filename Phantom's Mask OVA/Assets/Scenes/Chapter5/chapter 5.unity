@@ -314,12 +314,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429c830934e9e1940b3843090adaf23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caroline: {fileID: 1150940914}
-  robbie: {fileID: 898524658}
-  yvette: {fileID: 1560222764}
-  brian: {fileID: 836179106}
-  veronica: {fileID: 494623833}
-  controller: {fileID: 1173681218}
+--- !u!4 &62495778 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4203082391437876, guid: 283000834a79da94694713be6f054f2b,
+    type: 2}
+  m_PrefabInternal: {fileID: 529971281}
 --- !u!1 &63028038
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +393,7 @@ SpriteRenderer:
   m_Size: {x: 1.22, y: 1.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!61 &63028041
 BoxCollider2D:
@@ -432,9 +431,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc787d6cc876ae46804b72f4685a7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skullController: {fileID: 487804141}
-  skullNumber: 4
-  skullActivated: 0
 --- !u!1 &69660476
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +559,7 @@ SpriteRenderer:
   m_Size: {x: 1.22, y: 1.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!61 &70445836
 BoxCollider2D:
@@ -601,9 +597,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc787d6cc876ae46804b72f4685a7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skullController: {fileID: 487804141}
-  skullNumber: 5
-  skullActivated: 0
 --- !u!114 &91989513 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114347986182142552, guid: 12194109cb9484d499eb3ea7d16d254a,
@@ -708,7 +701,7 @@ SpriteRenderer:
   m_Size: {x: 2.83, y: 1.49}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &127273210
 GameObject:
@@ -852,7 +845,7 @@ SpriteRenderer:
   m_Size: {x: 1.22, y: 1.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!61 &127956505
 BoxCollider2D:
@@ -890,9 +883,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc787d6cc876ae46804b72f4685a7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skullController: {fileID: 487804141}
-  skullNumber: 6
-  skullActivated: 0
 --- !u!1 &163992712
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,8 +949,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d3e1e49b4ef6b4ebc757d16cafc8cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bookcase: {fileID: 652171009}
-  leftBookcase: {fileID: 2100042077}
 --- !u!1 &172325842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,11 +1274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083625905befa3548a02f2f4095d9c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filename: Couch Yvette.txt
-  pathFolder: Assets/Texts/Chapter 5/Level Text/
-  Displaytext: {fileID: 91989513}
-  Textbox: {fileID: 127273212}
-  active: 1
 --- !u!4 &364779079 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4095166025630348, guid: 9af2f5b06d8cd6442bac2134b513be0a,
@@ -1395,7 +1378,7 @@ SpriteRenderer:
   m_Size: {x: 1.67, y: 0.67}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!114 &379370377
 MonoBehaviour:
@@ -1408,7 +1391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7601c4000294d4aad50972d69f1183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
 --- !u!1 &468708373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,7 +1501,7 @@ SpriteRenderer:
   m_Size: {x: 0.69, y: 0.72}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1001 &472107395
 Prefab:
@@ -1768,20 +1750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d2647308b8bb049a7c887de219c695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skulls:
-  - {fileID: 717940891}
-  - {fileID: 959657495}
-  - {fileID: 1034413939}
-  - {fileID: 63028038}
-  - {fileID: 70445833}
-  - {fileID: 127956502}
-  - {fileID: 1279155417}
-  completed: 0
---- !u!1 &494623833 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1744944612930518, guid: 8db8b16570aafdb4da1c613d6bb535b7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1555876893}
 --- !u!1 &511453931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,7 +1811,7 @@ SpriteRenderer:
   m_Size: {x: 40, y: 29.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &511453934
 Transform:
@@ -1894,6 +1862,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd479cec7f45e3a49872491ad7f16810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &529971281
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1173681220}
+    m_Modifications:
+    - target: {fileID: 4203082391437876, guid: 283000834a79da94694713be6f054f2b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.0985837
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203082391437876, guid: 283000834a79da94694713be6f054f2b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.4458318
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203082391437876, guid: 283000834a79da94694713be6f054f2b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.3202496
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203082391437876, guid: 283000834a79da94694713be6f054f2b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203082391437876, guid: 283000834a79da94694713be6f054f2b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203082391437876, guid: 283000834a79da94694713be6f054f2b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203082391437876, guid: 283000834a79da94694713be6f054f2b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203082391437876, guid: 283000834a79da94694713be6f054f2b, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 283000834a79da94694713be6f054f2b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &565138492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,7 +2142,7 @@ SpriteRenderer:
   m_Size: {x: 2.83, y: 1.49}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &636041148 stripped
 Transform:
@@ -2182,9 +2192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d41c2ef44fae646ad7ddf154eea6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  altar1: {fileID: 611946710}
-  altar2: {fileID: 2073116078}
-  altar3: {fileID: 107123657}
 --- !u!1 &652171009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,7 +2253,7 @@ SpriteRenderer:
   m_Size: {x: 3.07, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &652171011
 Transform:
@@ -2272,7 +2279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1568e484cca77bb4196072dd3755a418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skull: {fileID: 1279155417}
 --- !u!61 &652171013
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2403,7 +2409,7 @@ SpriteRenderer:
   m_Size: {x: 1.22, y: 1.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!61 &717940894
 BoxCollider2D:
@@ -2441,9 +2447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc787d6cc876ae46804b72f4685a7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skullController: {fileID: 487804141}
-  skullNumber: 1
-  skullActivated: 0
 --- !u!1 &746590727
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,7 +2513,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f5965a1c3aebab4a936182f1e2a62b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mirror: {fileID: 798585252}
 --- !u!1 &798585252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,7 +2579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39487f2539dd624b993579cf6a6f4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lever: {fileID: 468708373}
 --- !u!1 &808478895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,11 +2633,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16520965, y: 4.2869854}
   m_EdgeRadius: 0
---- !u!1 &836179106 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1321640743497602, guid: 352066f460dffc44583d31a8afaccbe2,
-    type: 2}
-  m_PrefabInternal: {fileID: 1628312951}
 --- !u!1 &878244359
 GameObject:
   m_ObjectHideFlags: 0
@@ -2703,17 +2699,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7601c4000294d4aad50972d69f1183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
---- !u!1 &898524658 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1321640743497602, guid: 352066f460dffc44583d31a8afaccbe2,
-    type: 2}
-  m_PrefabInternal: {fileID: 1627855693}
---- !u!4 &898524663 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4190969339072434, guid: 352066f460dffc44583d31a8afaccbe2,
-    type: 2}
-  m_PrefabInternal: {fileID: 1627855693}
 --- !u!1 &959657495
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,7 +2773,7 @@ SpriteRenderer:
   m_Size: {x: 1.22, y: 1.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!61 &959657498
 BoxCollider2D:
@@ -2826,9 +2811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc787d6cc876ae46804b72f4685a7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skullController: {fileID: 487804141}
-  skullNumber: 2
-  skullActivated: 0
 --- !u!1 &1034413939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2903,7 +2885,7 @@ SpriteRenderer:
   m_Size: {x: 1.22, y: 1.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!61 &1034413942
 BoxCollider2D:
@@ -2941,9 +2923,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc787d6cc876ae46804b72f4685a7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skullController: {fileID: 487804141}
-  skullNumber: 3
-  skullActivated: 0
 --- !u!1001 &1105360039
 Prefab:
   m_ObjectHideFlags: 0
@@ -2990,11 +2969,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 667ee790878f2b847815f7e4c47ee701, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1150940914 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1748476952796998, guid: 667ee790878f2b847815f7e4c47ee701,
-    type: 2}
-  m_PrefabInternal: {fileID: 1105360039}
 --- !u!1 &1173681218
 GameObject:
   m_ObjectHideFlags: 0
@@ -3022,12 +2996,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1605cfe3f7688c0488e98181afff2aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1: {fileID: 494623833}
-  p2: {fileID: 1150940914}
-  p3: {fileID: 898524658}
-  p4: {fileID: 836179106}
-  p5: {fileID: 1560222764}
-  isActive: {fileID: 0}
 --- !u!4 &1173681220
 Transform:
   m_ObjectHideFlags: 0
@@ -3042,7 +3010,7 @@ Transform:
   - {fileID: 1465739688}
   - {fileID: 1930607169}
   - {fileID: 636041148}
-  - {fileID: 898524663}
+  - {fileID: 62495778}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3296,7 +3264,7 @@ SpriteRenderer:
   m_Size: {x: 1.22, y: 1.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!61 &1279155420
 BoxCollider2D:
@@ -3334,9 +3302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a371ccb55491094187fb6ad08cdced8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skullController: {fileID: 487804141}
-  skullNumber: 7
-  skullActivated: 0
 --- !u!1 &1313558867
 GameObject:
   m_ObjectHideFlags: 0
@@ -3398,7 +3363,7 @@ SpriteRenderer:
   m_Size: {x: 1.84, y: 2.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &1313558869
 Transform:
@@ -3510,7 +3475,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &1333378352
 Transform:
@@ -3626,11 +3591,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db8b16570aafdb4da1c613d6bb535b7, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1560222764 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1202466293492416, guid: f6173d9f38b03ac4e90374e9794a9a8f,
-    type: 2}
-  m_PrefabInternal: {fileID: 32568616}
 --- !u!1 &1619358969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,67 +3645,6 @@ Transform:
   m_Father: {fileID: 693454710}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1627855693
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1173681220}
-    m_Modifications:
-    - target: {fileID: 4190969339072434, guid: 352066f460dffc44583d31a8afaccbe2, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.4000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190969339072434, guid: 352066f460dffc44583d31a8afaccbe2, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.6099999
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190969339072434, guid: 352066f460dffc44583d31a8afaccbe2, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.15818954
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190969339072434, guid: 352066f460dffc44583d31a8afaccbe2, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190969339072434, guid: 352066f460dffc44583d31a8afaccbe2, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190969339072434, guid: 352066f460dffc44583d31a8afaccbe2, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190969339072434, guid: 352066f460dffc44583d31a8afaccbe2, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190969339072434, guid: 352066f460dffc44583d31a8afaccbe2, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1321640743497602, guid: 352066f460dffc44583d31a8afaccbe2, type: 2}
-      propertyPath: m_Name
-      value: Robbie
-      objectReference: {fileID: 0}
-    - target: {fileID: 212542036066561188, guid: 352066f460dffc44583d31a8afaccbe2,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 0.9433962
-      objectReference: {fileID: 0}
-    - target: {fileID: 212542036066561188, guid: 352066f460dffc44583d31a8afaccbe2,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212542036066561188, guid: 352066f460dffc44583d31a8afaccbe2,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0.097252734
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 352066f460dffc44583d31a8afaccbe2, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1628312951
 Prefab:
   m_ObjectHideFlags: 0
@@ -4383,7 +4282,7 @@ SpriteRenderer:
   m_Size: {x: 2.83, y: 1.49}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1001 &2086744152
 Prefab:
@@ -4569,7 +4468,7 @@ SpriteRenderer:
   m_Size: {x: 0.89, y: 0.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &2123198589 stripped
 Transform:
