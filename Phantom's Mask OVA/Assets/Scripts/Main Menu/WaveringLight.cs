@@ -25,7 +25,6 @@ public class WaveringLight : MonoBehaviour {
         while (true)
         {
             yield return new WaitForSeconds(rate);
-            Debug.Log(flicker.intensity);
             if (intensity >= max)
             {
                 decreasing = true;
