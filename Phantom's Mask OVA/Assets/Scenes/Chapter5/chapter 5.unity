@@ -1296,11 +1296,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083625905befa3548a02f2f4095d9c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filename: 
-  pathFolder: 
+  filename: Altar Caroline.txt
+  pathFolder: Assets/Texts/Chapter 5/Level Text/
   Displaytext: {fileID: 91989513}
   Textbox: {fileID: 127273212}
-  active: 0
+  active: 1
 --- !u!4 &364779079 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4095166025630348, guid: 9af2f5b06d8cd6442bac2134b513be0a,
