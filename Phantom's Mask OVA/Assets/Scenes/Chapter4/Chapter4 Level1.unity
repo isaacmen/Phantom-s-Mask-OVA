@@ -425,9 +425,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 158143678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b310989b1c8f7e4487d0dc4ddd09eff, type: 3}
+  m_Script: {fileID: 11500000, guid: 3870c9862198dcb44aafa3157051cf92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  caroline: {fileID: 206095888}
+  robbie: {fileID: 346970625}
+  controller: {fileID: 307401282}
 --- !u!1001 &202831236
 Prefab:
   m_ObjectHideFlags: 0
@@ -1060,6 +1063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66673b63b5a4a4c40af0525afcc65c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ladder: {fileID: 0}
 --- !u!1001 &976129087
 Prefab:
   m_ObjectHideFlags: 0
@@ -1222,6 +1226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe80b1826f3996d45b54dbf1a76f04e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCode: 0
 --- !u!1 &1636728478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cffa4fb4cc57a2478930b6886ce64a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roofdoor: {fileID: 0}
 --- !u!1 &1904149913
 GameObject:
   m_ObjectHideFlags: 0

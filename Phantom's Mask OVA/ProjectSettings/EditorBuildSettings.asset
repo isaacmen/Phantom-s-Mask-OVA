@@ -6,11 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Title Screen/Title Screen.unity
-    guid: 6a13016ee5dec5b48bc3fd1a211322ee
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/Chapter1/Chapter1 Prologue.unity
+    guid: a8990ec336a1ee14f8426ad1b9dad788
   - enabled: 1
     path: Assets/Scenes/Chapter1/Chapter1 Level1.unity
     guid: e95d2d2c0f609b0479b8fc49b949b122
@@ -20,9 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter1/Chapter1 Level3.unity
     guid: 243a0957ef25c98478a02badcbadea28
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Chapter2/Chapter2 Prologue.unity
+    guid: ec4a9cedac8e31d4889de62da4dfa3d2
   - enabled: 1
     path: Assets/Scenes/Chapter2/Chapter2 Level1.unity
     guid: 6fecffd89d34c9d4aba2526dc4c53e75
@@ -36,6 +33,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter2/Chapter2 Level3b.unity
     guid: 5eb2eee303f18a64eb5c27eebd2fac84
   - enabled: 1
+    path: Assets/Scenes/Chapter2/Chapter2 Epilogue.unity
+    guid: 470023a77962b09498fb242ea9bae53d
+  - enabled: 1
+    path: Assets/Scenes/Chapter3/Chapter3 Prologue.unity
+    guid: cdc7863ac7bc77e4e9c6f3a66c4da37b
+  - enabled: 1
     path: Assets/Scenes/Chapter3/Chapter3 Level1.unity
     guid: 05a095ec4a1fe114b95ea6ab0769b98f
   - enabled: 1
@@ -45,6 +48,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter3/Chapter3 Level3.unity
     guid: 66aa58facc6d65e4ebff8726bb616ad6
   - enabled: 1
+    path: Assets/Scenes/Chapter3/Chapter3 Epilogue.unity
+    guid: 4943ac28eaf29ce4f9654f9373602cfe
+  - enabled: 1
+    path: Assets/Scenes/Chapter4/Chapter4 Prologue.unity
+    guid: b0c49bc3eb4be4e4fb98cd4604f508aa
+  - enabled: 1
     path: Assets/Scenes/Chapter4/Chapter4 Level1.unity
     guid: 79e0d4a62b36b1a4d9e1a40f5c11c996
   - enabled: 1
@@ -53,4 +62,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter4/Chapter4 Level3.unity
     guid: eb426a3cc6f08ba42b063282f422d533
+  - enabled: 1
+    path: Assets/Scenes/Chapter4/Chapter4 Epilogue.unity
+    guid: 4e8395396a394d446a64c2c7740bfb45
+  - enabled: 1
+    path: Assets/Scenes/Chapter5/chapter 5.unity
+    guid: 02829dc617041b44696a0554faa0d1a9
   m_configObjects: {}
