@@ -672,6 +672,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 4829234122843324, guid: 667ee790878f2b847815f7e4c47ee701, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 667ee790878f2b847815f7e4c47ee701, type: 2}
   m_IsPrefabParent: 0
@@ -756,7 +760,7 @@ Animator:
   m_GameObject: {fileID: 497049771}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9c5e02918ee3fc345a0d8e006f46c7ba, type: 2}
+  m_Controller: {fileID: 9100000, guid: d6ec8263ad562484c980569ff2e0e162, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1048,7 +1052,7 @@ Animator:
   m_GameObject: {fileID: 780124613}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5cc8167590cf15d4c8c8d03ff6dfde35, type: 2}
+  m_Controller: {fileID: 9100000, guid: d6ec8263ad562484c980569ff2e0e162, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1288,7 +1292,7 @@ Animator:
   m_GameObject: {fileID: 1562926996}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4f5a8287c969dba47a52fb124433a611, type: 2}
+  m_Controller: {fileID: 9100000, guid: d6ec8263ad562484c980569ff2e0e162, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1831,6 +1835,10 @@ Prefab:
         type: 2}
       propertyPath: m_Size.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829234122843324, guid: 667ee790878f2b847815f7e4c47ee701, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 667ee790878f2b847815f7e4c47ee701, type: 2}

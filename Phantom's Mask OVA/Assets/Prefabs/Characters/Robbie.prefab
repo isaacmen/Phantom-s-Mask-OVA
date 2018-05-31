@@ -211,7 +211,7 @@ Animator:
   m_GameObject: {fileID: 1870573713793384}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4f5a8287c969dba47a52fb124433a611, type: 2}
+  m_Controller: {fileID: 9100000, guid: 519134efa37cb5b4cbb8ab06325796a0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829871fc05946724f952765f591d0a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textReader: {fileID: 0}
   grounded: 0
   climbing: 0
   speed: 6
