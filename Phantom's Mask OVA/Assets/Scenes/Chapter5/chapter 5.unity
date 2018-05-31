@@ -218,6 +218,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114138884110030582, guid: f6173d9f38b03ac4e90374e9794a9a8f,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 364779077}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6173d9f38b03ac4e90374e9794a9a8f, type: 2}
   m_IsPrefabParent: 0
@@ -1285,7 +1290,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1734972727855044, guid: 9af2f5b06d8cd6442bac2134b513be0a,
     type: 2}
   m_PrefabInternal: {fileID: 2086744152}
---- !u!114 &364779078
+--- !u!4 &364779079 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4095166025630348, guid: 9af2f5b06d8cd6442bac2134b513be0a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2086744152}
+--- !u!114 &364779080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1293,7 +1303,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 364779077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 083625905befa3548a02f2f4095d9c17, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a4c6d219cd02be41b5002dd02250347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   filename: Altar Caroline.txt
@@ -1301,11 +1311,6 @@ MonoBehaviour:
   Displaytext: {fileID: 91989513}
   Textbox: {fileID: 127273212}
   active: 1
---- !u!4 &364779079 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4095166025630348, guid: 9af2f5b06d8cd6442bac2134b513be0a,
-    type: 2}
-  m_PrefabInternal: {fileID: 2086744152}
 --- !u!1 &379370373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,6 +1943,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114372948678842056, guid: 283000834a79da94694713be6f054f2b,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 364779077}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 283000834a79da94694713be6f054f2b, type: 2}
   m_IsPrefabParent: 0
@@ -3019,6 +3029,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114999167736105358, guid: 667ee790878f2b847815f7e4c47ee701,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 364779077}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 667ee790878f2b847815f7e4c47ee701, type: 2}
   m_IsPrefabParent: 0
@@ -3670,6 +3685,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114095030198769400, guid: 8db8b16570aafdb4da1c613d6bb535b7,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 364779077}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db8b16570aafdb4da1c613d6bb535b7, type: 2}
   m_IsPrefabParent: 0
@@ -3770,6 +3790,11 @@ Prefab:
       propertyPath: m_Name
       value: Brian
       objectReference: {fileID: 0}
+    - target: {fileID: 114311269673133432, guid: 352066f460dffc44583d31a8afaccbe2,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 364779077}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 352066f460dffc44583d31a8afaccbe2, type: 2}
   m_IsPrefabParent: 0

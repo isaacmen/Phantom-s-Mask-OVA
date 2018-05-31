@@ -496,14 +496,14 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114999167736105358, guid: 667ee790878f2b847815f7e4c47ee701,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 1280385287}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 667ee790878f2b847815f7e4c47ee701, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &373774238 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1748476952796998, guid: 667ee790878f2b847815f7e4c47ee701,
-    type: 2}
-  m_PrefabInternal: {fileID: 373774237}
 --- !u!1001 &377193906
 Prefab:
   m_ObjectHideFlags: 0
@@ -762,14 +762,19 @@ Prefab:
       propertyPath: m_Constraints
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114372948678842056, guid: 283000834a79da94694713be6f054f2b,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 1280385287}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 283000834a79da94694713be6f054f2b, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1155596900 stripped
+--- !u!1 &1280385287 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1870573713793384, guid: 283000834a79da94694713be6f054f2b,
+  m_PrefabParentObject: {fileID: 1734972727855044, guid: 9af2f5b06d8cd6442bac2134b513be0a,
     type: 2}
-  m_PrefabInternal: {fileID: 1155596899}
+  m_PrefabInternal: {fileID: 377193906}
 --- !u!1 &1636728478
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,9 +870,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2b0d54a13363fd449ba1621019a58a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caroline: {fileID: 373774238}
-  robbie: {fileID: 1155596900}
-  txt: {fileID: 50724706}
 --- !u!4 &1795560970
 Transform:
   m_ObjectHideFlags: 0

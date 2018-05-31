@@ -496,6 +496,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114999167736105358, guid: 667ee790878f2b847815f7e4c47ee701,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 1025396052}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 667ee790878f2b847815f7e4c47ee701, type: 2}
   m_IsPrefabParent: 0
@@ -610,14 +615,14 @@ Prefab:
       propertyPath: m_Constraints
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114138884110030582, guid: f6173d9f38b03ac4e90374e9794a9a8f,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 1025396052}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6173d9f38b03ac4e90374e9794a9a8f, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &533759210 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1202466293492416, guid: f6173d9f38b03ac4e90374e9794a9a8f,
-    type: 2}
-  m_PrefabInternal: {fileID: 533759209}
 --- !u!1 &707443553
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +735,11 @@ Prefab:
       propertyPath: m_Constraints
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114095030198769400, guid: 8db8b16570aafdb4da1c613d6bb535b7,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 1025396052}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db8b16570aafdb4da1c613d6bb535b7, type: 2}
   m_IsPrefabParent: 0
@@ -738,6 +748,11 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224131437318954858, guid: 12194109cb9484d499eb3ea7d16d254a,
     type: 2}
   m_PrefabInternal: {fileID: 202831236}
+--- !u!1 &1025396052 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1734972727855044, guid: 9af2f5b06d8cd6442bac2134b513be0a,
+    type: 2}
+  m_PrefabInternal: {fileID: 377193906}
 --- !u!1001 &1155596899
 Prefab:
   m_ObjectHideFlags: 0
@@ -782,6 +797,11 @@ Prefab:
       propertyPath: m_Constraints
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114372948678842056, guid: 283000834a79da94694713be6f054f2b,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 1025396052}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 283000834a79da94694713be6f054f2b, type: 2}
   m_IsPrefabParent: 0
@@ -954,9 +974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ba3c1bae27cb4409fe2a71654b779d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yvette: {fileID: 533759210}
-  veronica: {fileID: 1841330144}
-  txt: {fileID: 50724706}
 --- !u!4 &1795560970
 Transform:
   m_ObjectHideFlags: 0
@@ -971,8 +988,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1841330144 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1744944612930518, guid: 8db8b16570aafdb4da1c613d6bb535b7,
-    type: 2}
-  m_PrefabInternal: {fileID: 895173626}

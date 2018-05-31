@@ -751,6 +751,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114999167736105358, guid: 667ee790878f2b847815f7e4c47ee701,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 377193907}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 667ee790878f2b847815f7e4c47ee701, type: 2}
   m_IsPrefabParent: 0
@@ -816,6 +821,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9af2f5b06d8cd6442bac2134b513be0a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &377193907 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1734972727855044, guid: 9af2f5b06d8cd6442bac2134b513be0a,
+    type: 2}
+  m_PrefabInternal: {fileID: 377193906}
 --- !u!1001 &399530547
 Prefab:
   m_ObjectHideFlags: 0
@@ -855,6 +865,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114372948678842056, guid: 283000834a79da94694713be6f054f2b,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 377193907}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 283000834a79da94694713be6f054f2b, type: 2}
   m_IsPrefabParent: 0
@@ -916,6 +931,11 @@ Prefab:
       propertyPath: m_Constraints
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114138884110030582, guid: f6173d9f38b03ac4e90374e9794a9a8f,
+        type: 2}
+      propertyPath: textReader
+      value: 
+      objectReference: {fileID: 377193907}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6173d9f38b03ac4e90374e9794a9a8f, type: 2}
   m_IsPrefabParent: 0
@@ -1227,9 +1247,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1786392586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fe6da349528ce943ba072c9c34b7366, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f4a4aaab02bd6b43bf7f6d235e552cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txt: {fileID: 50724706}
 --- !u!4 &1786392588
 Transform:
   m_ObjectHideFlags: 0

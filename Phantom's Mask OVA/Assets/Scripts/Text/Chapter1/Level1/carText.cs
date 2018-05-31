@@ -7,8 +7,9 @@ using UnityEngine;
  * This script uses the following classes from Car:
  *          -CarMovement
  *          -CarCheckFix
- */ 
-public class carText : MonoBehaviour {
+ */
+public class carText : MonoBehaviour
+{
     //The files the car will use
     //All private cosnts, these file names won't be changed nor used by other scripts
     private const string brokenCarAfterInspection_Caroline = "BrokenCar(afterInspection)-Caroline.txt";
@@ -32,14 +33,18 @@ public class carText : MonoBehaviour {
     private bool robbieTouching = false;
     private bool yvetteTouching = false;
 
-	private GameObject reader;
+    private GameObject reader;
 
-	void Start () {
-		reader = GameObject.FindGameObjectWithTag ("textbox");
-	}
+    public GameObject carSound;
+
+    void Start()
+    {
+        reader = GameObject.FindGameObjectWithTag("textbox");
+    }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         //If the car was fixed, disable this script
         checkCarFixed();
 
@@ -60,23 +65,24 @@ public class carText : MonoBehaviour {
         //Yvette's Line if Yvette is the active player
         if (yvetteTouching && !yvetteTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette" && Input.GetKey("e"))
         {
-			reader.GetComponent<ReadText>().active = true;
-			reader.GetComponent<ReadText>().filename = brokenCarAfterInspection_Yvette;
+            reader.GetComponent<ReadText>().active = true;
+            reader.GetComponent<ReadText>().filename = brokenCarAfterInspection_Yvette;
             yvetteTouch = true;
         }
 
         //Caroline text if Caroline is the active player
         if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
-			reader.GetComponent<ReadText>().active = true;
-			reader.GetComponent<ReadText>().filename = brokenCarAfterInspection_Caroline;
+            reader.GetComponent<ReadText>().active = true;
+            reader.GetComponent<ReadText>().filename = brokenCarAfterInspection_Caroline;
             carolineTouch = true;
         }
 
         if (robbieTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         {
-			reader.GetComponent<ReadText>().active = true;
-			reader.GetComponent<ReadText>().filename = RobbieFixCar;
+            //Destroy the detect sound and sound up the car
+            Destroy(GameObject.Find("Caroline Detect"));
+            StartCoroutine(CarStartUpSound());
         }
     }
 
@@ -90,8 +96,8 @@ public class carText : MonoBehaviour {
         //if (gameObject.GetComponent<carCheckFix>().robbieTouching && !robbieTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         if (robbieTouching && !robbieTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         {
-			reader.GetComponent<ReadText>().active = true;
-			reader.GetComponent<ReadText>().filename = brokenCarBeforeInspection_Robbie;
+            reader.GetComponent<ReadText>().active = true;
+            reader.GetComponent<ReadText>().filename = brokenCarBeforeInspection_Robbie;
             robbieTouch = true;
         }
         //Yvette's line
@@ -99,16 +105,16 @@ public class carText : MonoBehaviour {
         //if (gameObject.GetComponent<carCheckFix>().yvetteTouching && !yvetteTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette" && Input.GetKey("e"))
         if (yvetteTouching && !yvetteTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette" && Input.GetKey("e"))
         {
-			reader.GetComponent<ReadText>().active = true;
-			reader.GetComponent<ReadText>().filename = brokenCarBeforeInspection_Yvette;
+            reader.GetComponent<ReadText>().active = true;
+            reader.GetComponent<ReadText>().filename = brokenCarBeforeInspection_Yvette;
             yvetteTouch = true;
         }
 
         //If caroline is touching the car, she's active, and e is being pressed
         if (carolineTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
-			reader.GetComponent<ReadText>().active = true;
-			reader.GetComponent<ReadText>().filename = CarolineDetect_car;
+            reader.GetComponent<ReadText>().active = true;
+            reader.GetComponent<ReadText>().filename = CarolineDetect_car;
             //Reset touching if she's activated
             resetTouching();
             //Caroline won't proceed until spacebar is pressed and her text is over
@@ -158,5 +164,15 @@ public class carText : MonoBehaviour {
         else if (player.name == "Yvette")
             yvetteTouching = false;
     }
+
+    IEnumerator CarStartUpSound()
+    {
+        carSound.GetComponent<AudioSource>().enabled = true;
+        yield return new WaitForSeconds(2);
+        Debug.Log("Car Started");
+        reader.GetComponent<ReadText>().active = true;
+        reader.GetComponent<ReadText>().filename = RobbieFixCar;
+    }
+
 
 }
