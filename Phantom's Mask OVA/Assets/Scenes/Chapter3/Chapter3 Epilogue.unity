@@ -844,7 +844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  level: Chapter4 Level1
+  level: Chapter4 Prologue
 --- !u!61 &707443557
 BoxCollider2D:
   m_ObjectHideFlags: 0
