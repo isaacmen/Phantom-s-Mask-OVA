@@ -62,13 +62,13 @@ public class ReadText : MonoBehaviour
                 currentline++;
             }
 
-            else if (currentline < max && Input.GetKeyDown("space"))
+            else if (currentline < max && Input.GetKeyUp("space"))
             {
                 Displaytext.text = lines[currentline];
                 currentline++;
             }
 
-            else if (currentline >= max && Input.GetKeyDown("space"))
+            else if (currentline >= max && Input.GetKeyUp("space"))
             {
                 Displaytext.text = "";
                 currentline = 0; //reset the current line
