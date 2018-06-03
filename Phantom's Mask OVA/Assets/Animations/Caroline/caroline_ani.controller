@@ -192,7 +192,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: fb3cfe876497e4349a266bed11221c26, type: 2}
+  m_Motion: {fileID: 7400000, guid: 405fe3d9dd48db240a7955c57bca186f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -205,7 +205,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Caroline_IDLE
-  m_Speed: 0.25
+  m_Speed: 0.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101428076393831758}
@@ -219,7 +219,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d2a694572b83b214799cf4082a91d376, type: 2}
+  m_Motion: {fileID: 7400000, guid: b6ef71f4c9bb3f84a94d007f5a963893, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -246,7 +246,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c3848634d180ea14697ef8b0c5d04813, type: 2}
+  m_Motion: {fileID: 7400000, guid: bfb213aee4efa394b928552874cf5a24, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

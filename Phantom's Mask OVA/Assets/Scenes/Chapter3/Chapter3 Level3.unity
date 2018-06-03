@@ -1628,7 +1628,7 @@ Prefab:
         type: 2}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 5cc8167590cf15d4c8c8d03ff6dfde35, type: 2}
+      objectReference: {fileID: 9100000, guid: 1bd06b1180f5d944e887ee768d03e11e, type: 2}
     - target: {fileID: 114138884110030582, guid: f6173d9f38b03ac4e90374e9794a9a8f,
         type: 2}
       propertyPath: textReader

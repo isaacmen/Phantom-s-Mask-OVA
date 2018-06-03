@@ -213,7 +213,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3c9f5bca515009640af6426e2a4f0f5c, type: 2}
+  m_Motion: {fileID: 7400000, guid: b8aeddc004ec2e94a8cc882e87afc8b7, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -240,7 +240,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 13d204b956c11f944a7d4a6bfda1f14d, type: 2}
+  m_Motion: {fileID: 7400000, guid: fa17bc49af5b2e640944f075e3903c75, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -303,7 +303,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Chris_Idle
-  m_Speed: 0.25
+  m_Speed: 0.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101827135976164146}
@@ -317,7 +317,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: da4a1e46521d2a04fba368eae5550c39, type: 2}
+  m_Motion: {fileID: 7400000, guid: c80e428dbc5695642a940c1008250499, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

@@ -178,7 +178,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Yvette_Idle
-  m_Speed: 0.25
+  m_Speed: 0.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101033846945502198}
@@ -192,7 +192,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8cad38ef3c33eca4aa223e16c0f5fd1f, type: 2}
+  m_Motion: {fileID: 7400000, guid: a66cc61d86bbc0c45a9adda598f5ba72, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -219,7 +219,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f38629f6f630ca64da6b4e9f0dd5c2e5, type: 2}
+  m_Motion: {fileID: 7400000, guid: b7effab704ac6424481efb9e847a4c6d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -246,7 +246,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 243c7cfa1cf19a6419b6bd20abbb9a18, type: 2}
+  m_Motion: {fileID: 7400000, guid: 174adce8a616a4d4ba81b64a3624b8d7, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

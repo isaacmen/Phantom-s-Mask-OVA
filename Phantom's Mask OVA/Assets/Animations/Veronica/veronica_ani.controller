@@ -192,7 +192,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4e1ea587c1c3f844f847d835fc299b6f, type: 2}
+  m_Motion: {fileID: 7400000, guid: fa64eb75c2372e6429fb37f8ee8b88c5, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -205,7 +205,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Veronica_Idle
-  m_Speed: 0.25
+  m_Speed: 0.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101589878120215412}
@@ -219,7 +219,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7dedab674a065e54f9fb5c2797eac074, type: 2}
+  m_Motion: {fileID: 7400000, guid: e078d0bc4cf15024abce2c45a58dd51e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -246,7 +246,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 69157fb7d65a7eb4582029efceb10369, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6b7279dfdd874a6429c09aeb9e0625d0, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
