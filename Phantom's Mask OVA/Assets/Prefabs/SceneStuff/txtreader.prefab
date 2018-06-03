@@ -51,8 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4c6d219cd02be41b5002dd02250347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filename: testtext.txt
-  pathFolder: Assets/Texts/Chapter1/Level3/
+  filename: Chapter 1 Prologue(1).txt
+  pathFolder: Assets/Texts/Chapter1/Prologue/
   Displaytext: {fileID: 0}
   Textbox: {fileID: 0}
   active: 1

@@ -9,11 +9,21 @@ public class Ch4Epilogue : MonoBehaviour {
 	public GameObject veronica;
 	public Text txt;
 
+	public AudioClip carsound;
+	public AudioClip thud;
+	public AudioClip carbreak;
+
 	private GameObject reader;
+
+	private AudioSource BGM;
+	private AudioSource SFX;
 
 	// Use this for initialization
 	void Start () {
 		reader = GameObject.FindGameObjectWithTag("textbox");
+
+		BGM = GameObject.Find ("BGM").GetComponent<AudioSource> ();
+		SFX = GameObject.Find ("SFX").GetComponent<AudioSource> ();
 
 		StartCoroutine(scene());
 	}
