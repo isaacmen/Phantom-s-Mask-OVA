@@ -1,6 +1,8 @@
-Welcome to Phantom's mask! This is a puzzle game where each character has special abilities that will be used to solve puzzles.
+Welcome to Phantom's mask! This is a puzzle game where each character has special abilities that will be used to solve puzzles. Use WASD to move, and Spacebar to jump.
 Swap between characters using the left shift button. Activate their abilities using the E button.
-Caroline, our quiet protagonist, has the detect ability. She can notice details that others would miss and point them out to others in the group. 
+Caroline, our quiet protagonist, has the detect ability. She can notice sounds and details that others would miss and point them out to everyone else.
+If Caroline is being actively controlled, you may hear sounds if there's something you can interact with.
 Robbie, the computer master, has gotten pretty good with machines. He can fix and activate machinery the others can't. 
-Yvette, the snappy fighter packs a punch! She can break down certain obstacles that are in the way of the group. 
+Yvette, the snappy fighter packs a punch! She can break down certain obstacles that are in the way of the group.
+If the character can't interact with an object, you'll get a hint about who can. Try swapping around if you get stuck!
 Now that we're all introduced, you'd better take a look at the car.
