@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FixFridge : MonoBehaviour {
-   
+    public GameObject tempchangescene;
     public bool foundToolbox;
     public bool robbieTouching;
 	// Use this for initialization
@@ -26,6 +26,7 @@ public class FixFridge : MonoBehaviour {
             if(GameObject.Find("PlayerController").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")
             {
                 //Yay fixed the fridge get diary level over after text stuff
+                tempchangescene.GetComponent<changeScene>().active = true;
             }
         }
         

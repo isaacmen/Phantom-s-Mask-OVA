@@ -191,7 +191,6 @@ GameObject:
   - component: {fileID: 158143682}
   - component: {fileID: 158143681}
   - component: {fileID: 158143680}
-  - component: {fileID: 158143679}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -199,13 +198,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &158143679
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 158143678}
-  m_Enabled: 1
 --- !u!124 &158143680
 Behaviour:
   m_ObjectHideFlags: 0
@@ -685,6 +677,35 @@ GameObject:
   m_PrefabParentObject: {fileID: 1734972727855044, guid: 9af2f5b06d8cd6442bac2134b513be0a,
     type: 2}
   m_PrefabInternal: {fileID: 377193906}
+--- !u!1 &528646103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 528646104}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528646104
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528646103}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.41, y: -4.18, z: -1.46}
+  m_LocalScale: {x: 0.35422707, y: 1.0691898, z: 1}
+  m_Children:
+  - {fileID: 646219918}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &607253626
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,6 +772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52b24dc0169d634a8e021e8e1de30af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempchangescene: {fileID: 1755920174}
   foundToolbox: 0
   robbieTouching: 0
 --- !u!1 &637718990
@@ -865,7 +887,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fd672cf3cd1844986f408e72822f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempchangescene: {fileID: 1755920174}
+  carolineDetectSound: {fileID: 646219917}
+--- !u!1 &646219917 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1279945336998932, guid: 911e2061492ef6a40be3b54745abf504,
+    type: 2}
+  m_PrefabInternal: {fileID: 1726253709}
+--- !u!4 &646219918 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504,
+    type: 2}
+  m_PrefabInternal: {fileID: 1726253709}
 --- !u!1 &665512868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1198,13 @@ Transform:
   m_PrefabParentObject: {fileID: 4264702922622076, guid: 667ee790878f2b847815f7e4c47ee701,
     type: 2}
   m_PrefabInternal: {fileID: 373774237}
+--- !u!81 &1562927003
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1562926996}
+  m_Enabled: 1
 --- !u!1001 &1619198173
 Prefab:
   m_ObjectHideFlags: 0
@@ -1313,6 +1352,67 @@ Transform:
   m_Father: {fileID: 2026483413}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1001 &1726253709
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 528646104}
+    m_Modifications:
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279945336998932, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_Name
+      value: Caroline Detect Floorboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 82558641061885592, guid: 911e2061492ef6a40be3b54745abf504,
+        type: 2}
+      propertyPath: MaxDistance
+      value: 2.0191107
+      objectReference: {fileID: 0}
+    - target: {fileID: 82558641061885592, guid: 911e2061492ef6a40be3b54745abf504,
+        type: 2}
+      propertyPath: MinDistance
+      value: 0.1780734
+      objectReference: {fileID: 0}
+    - target: {fileID: 82558641061885592, guid: 911e2061492ef6a40be3b54745abf504,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.245
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1754100945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,7 +1442,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1701743, y: -0.078541756}
+  m_Offset: {x: 0.18265444, y: -0.5153455}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1353,7 +1453,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6596514, y: 0.8429165}
+  m_Size: {x: 0.8842932, y: 1.716524}
   m_EdgeRadius: 0
 --- !u!4 &1754100947
 Transform:

@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class invisibleFloorBoard : MonoBehaviour {
-
-	public GameObject tempchangescene;
-
+    public GameObject carolineDetectSound;
     private bool CarolineTouching;
     private bool VeronicaTouching;
     private bool floorIsVisible;
@@ -38,6 +36,7 @@ public class invisibleFloorBoard : MonoBehaviour {
                 GameObject.Find("TextScripts").GetComponent<Ch4Lvl3Text>().CarolineFoundFloorboard();
                 GetComponent<Renderer>().enabled = true;
                 floorIsVisible = true;
+                Destroy(carolineDetectSound);
             }
         }
     }
@@ -53,7 +52,7 @@ public class invisibleFloorBoard : MonoBehaviour {
             }
 			// idk when or how this scene is supposed to end
 			// so i jus moved on here
-			tempchangescene.GetComponent<changeScene> ().active = true;
+			// tempchangescene.GetComponent<changeScene> ().active = true;
 
         }
     }
