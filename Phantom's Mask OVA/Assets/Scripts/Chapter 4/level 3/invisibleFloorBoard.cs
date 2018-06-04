@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class invisibleFloorBoard : MonoBehaviour {
 
+	public GameObject tempchangescene;
+
     private bool CarolineTouching;
     private bool VeronicaTouching;
     private bool floorIsVisible;
@@ -49,6 +51,10 @@ public class invisibleFloorBoard : MonoBehaviour {
                 GameObject.Find("TextScripts").GetComponent<Ch4Lvl3Text>().VeronicaPryFloorboard();
                 GameObject.Find("Cabinet").GetComponent<openCabinet>().SetVeronicaFoundKey();
             }
+			// idk when or how this scene is supposed to end
+			// so i jus moved on here
+			tempchangescene.GetComponent<changeScene> ().active = true;
+
         }
     }
 

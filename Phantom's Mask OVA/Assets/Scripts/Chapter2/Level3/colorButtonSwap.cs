@@ -9,6 +9,9 @@ public class colorButtonSwap : MonoBehaviour {
     public GameObject o3;
     public GameObject o4;
     public GameObject wheel;
+
+	// temp scene changer
+	public GameObject scenechange;
 	
 	// Update is called once per frame
 	void Update () {
@@ -57,6 +60,9 @@ public class colorButtonSwap : MonoBehaviour {
         }
         wheel.GetComponent<FerrisWheelMovementNEW>().setFinishedTrue();
         wheel.GetComponent<FerrisWheelMovementNEW>().changeStayStill(false);
-        return true;
+
+		Debug.Log ("did it");
+		scenechange.GetComponent<changeScene> ().active = true;
+		return true;
     }
 }

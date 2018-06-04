@@ -525,7 +525,7 @@ Prefab:
     - target: {fileID: 224626749700977422, guid: 12194109cb9484d499eb3ea7d16d254a,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -273.15
+      value: -244.5
       objectReference: {fileID: 0}
     - target: {fileID: 224626749700977422, guid: 12194109cb9484d499eb3ea7d16d254a,
         type: 2}
@@ -557,9 +557,30 @@ Prefab:
       propertyPath: m_FontData.m_FontSize
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 224707342859623756, guid: 12194109cb9484d499eb3ea7d16d254a,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224626749700977422, guid: 12194109cb9484d499eb3ea7d16d254a,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224707342859623756, guid: 12194109cb9484d499eb3ea7d16d254a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -221.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12194109cb9484d499eb3ea7d16d254a, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &202831237 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114486725958619168, guid: 12194109cb9484d499eb3ea7d16d254a,
+    type: 2}
+  m_PrefabInternal: {fileID: 202831236}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &351993163
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +897,7 @@ Prefab:
         type: 2}
       propertyPath: Textbox
       value: 
-      objectReference: {fileID: 1636728480}
+      objectReference: {fileID: 202831237}
     - target: {fileID: 114133626500751936, guid: 9af2f5b06d8cd6442bac2134b513be0a,
         type: 2}
       propertyPath: pathFolder
@@ -886,6 +907,11 @@ Prefab:
         type: 2}
       propertyPath: filename
       value: Level 2 Start.txt
+      objectReference: {fileID: 0}
+    - target: {fileID: 114133626500751936, guid: 9af2f5b06d8cd6442bac2134b513be0a,
+        type: 2}
+      propertyPath: active
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9af2f5b06d8cd6442bac2134b513be0a, type: 2}
@@ -1002,7 +1028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  level: Chapter1 Level2
+  level: Chapter3 Level3
 --- !u!61 &707443557
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1085,11 +1111,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3567954eb89fee64e917e6650edf1fa8, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &986686866 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224131437318954858, guid: 12194109cb9484d499eb3ea7d16d254a,
-    type: 2}
-  m_PrefabInternal: {fileID: 202831236}
 --- !u!1 &1029347670 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1734972727855044, guid: 9af2f5b06d8cd6442bac2134b513be0a,
@@ -1361,7 +1382,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1332097549}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a4c6d219cd02be41b5002dd02250347, type: 3}
   m_Name: 
@@ -1369,7 +1390,7 @@ MonoBehaviour:
   filename: 
   pathFolder: Assets/Texts/Chapter 3/Level 1/
   Displaytext: {fileID: 50724706}
-  Textbox: {fileID: 1636728480}
+  Textbox: {fileID: 202831237}
   active: 0
 --- !u!1 &1445109322
 GameObject:
@@ -1494,74 +1515,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4264702922622076, guid: 667ee790878f2b847815f7e4c47ee701,
     type: 2}
   m_PrefabInternal: {fileID: 373774237}
---- !u!1 &1636728478
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1636728479}
-  - component: {fileID: 1636728481}
-  - component: {fileID: 1636728480}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1636728479
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1636728478}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 986686866}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -237.9}
-  m_SizeDelta: {x: 508.5, y: 115.3}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1636728480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1636728478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 23dbe086cc59c7f4993593bb857fdd4c, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1636728481
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1636728478}
 --- !u!1 &1845758430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1637,6 +1590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1846628133}
   - component: {fileID: 1846628132}
+  - component: {fileID: 1846628134}
   m_Layer: 0
   m_Name: placeholderrollercoaster
   m_TagString: Untagged
@@ -1702,6 +1656,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1846628134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846628131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f3c8e6890552a479d9d12f08000307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakpoint1: {fileID: 2130753080}
+  breakpoint2: {fileID: 25696862}
+  breakpoint3: {fileID: 1445109322}
+  breakpoint4: {fileID: 368090637}
+  changescene: {fileID: 707443553}
 --- !u!1 &1904149913
 GameObject:
   m_ObjectHideFlags: 0

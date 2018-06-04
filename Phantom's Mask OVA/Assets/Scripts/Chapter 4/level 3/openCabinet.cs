@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class openCabinet : MonoBehaviour {
-    private bool VeronicaFoundKey;
+    
+	private bool VeronicaFoundKey;
 
     private bool someoneIsColliding;
 	// Use this for initialization
@@ -26,7 +27,7 @@ public class openCabinet : MonoBehaviour {
                 //They got the toolbox, can fix the fridge now
                 GameObject.Find("Fridge").GetComponent<FixFridge>().SetFoundToolbox();
             }
-        }
+		}
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

@@ -6,6 +6,7 @@ public class lightOn : MonoBehaviour {
 	public clockMech clock;
 	public bool on;
 
+	public GameObject tempscenechange;
 	// Use this for initialization
 	void Start () {
 			on = false;
@@ -16,6 +17,11 @@ public class lightOn : MonoBehaviour {
 		if (clock.repaired){
 			gameObject.GetComponent<Renderer>().enabled = false;
 			on = true;
+
+			// idk where its actually supposed to change scene
+			// so i just put it here for now
+
+			tempscenechange.GetComponent<changeScene> ().active = true;
 		}
 	}
 }
