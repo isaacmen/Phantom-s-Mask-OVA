@@ -1318,7 +1318,7 @@ Prefab:
         type: 2}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 8300000, guid: c6f8d13e42c105442ae3bdadd67803a4, type: 3}
+      objectReference: {fileID: 8300000, guid: a41bdb9e3529fa64ebc66953dd25dea4, type: 3}
     - target: {fileID: 114824690026712790, guid: 17d23add3a775c14e9cceab9509fe6e2,
         type: 2}
       propertyPath: click
@@ -1786,7 +1786,7 @@ Prefab:
         type: 2}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 8300000, guid: c6f8d13e42c105442ae3bdadd67803a4, type: 3}
+      objectReference: {fileID: 8300000, guid: a41bdb9e3529fa64ebc66953dd25dea4, type: 3}
     - target: {fileID: 114824690026712790, guid: 17d23add3a775c14e9cceab9509fe6e2,
         type: 2}
       propertyPath: click
@@ -1959,7 +1959,7 @@ Prefab:
         type: 2}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 8300000, guid: c6f8d13e42c105442ae3bdadd67803a4, type: 3}
+      objectReference: {fileID: 8300000, guid: a41bdb9e3529fa64ebc66953dd25dea4, type: 3}
     - target: {fileID: 114824690026712790, guid: 17d23add3a775c14e9cceab9509fe6e2,
         type: 2}
       propertyPath: click
@@ -2214,7 +2214,7 @@ Prefab:
         type: 2}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 8300000, guid: c6f8d13e42c105442ae3bdadd67803a4, type: 3}
+      objectReference: {fileID: 8300000, guid: a41bdb9e3529fa64ebc66953dd25dea4, type: 3}
     - target: {fileID: 114824690026712790, guid: 17d23add3a775c14e9cceab9509fe6e2,
         type: 2}
       propertyPath: click
@@ -2398,7 +2398,7 @@ Prefab:
         type: 2}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 8300000, guid: c6f8d13e42c105442ae3bdadd67803a4, type: 3}
+      objectReference: {fileID: 8300000, guid: a41bdb9e3529fa64ebc66953dd25dea4, type: 3}
     - target: {fileID: 114824690026712790, guid: 17d23add3a775c14e9cceab9509fe6e2,
         type: 2}
       propertyPath: click
