@@ -11,7 +11,7 @@ using UnityEngine;
  * it starts.
  */
 public class carCheckFix : MonoBehaviour {
-
+    public GameObject carolineDetectedCarSound;
     [HideInInspector]
     public bool carolineActivated = false;
     [HideInInspector]
@@ -67,6 +67,7 @@ public class carCheckFix : MonoBehaviour {
         {
             //Caroline checked what was wrong with the car
             carolineActivated = true;
+            Destroy(carolineDetectedCarSound);
         }
     }
 
