@@ -10,11 +10,11 @@ public class colorButtonSwap : MonoBehaviour {
     public GameObject o4;
     public GameObject wheel;
 
-	// temp scene changer
-	public GameObject scenechange;
-	
-	// Update is called once per frame
-	void Update () {
+    public UnityEngine.UI.Text Displaytext;
+    public UnityEngine.UI.Image Textbox;
+
+    // Update is called once per frame
+    void Update () {
         if (wheel.GetComponent<FerrisWheelMovementNEW>().finished == false)
         {
             if (wheel.GetComponent<FerrisWheelMovementNEW>().playerOrder[0] != 0)
@@ -60,9 +60,22 @@ public class colorButtonSwap : MonoBehaviour {
         }
         wheel.GetComponent<FerrisWheelMovementNEW>().setFinishedTrue();
         wheel.GetComponent<FerrisWheelMovementNEW>().changeStayStill(false);
+        //READ THE TEXT //
+        Textbox.gameObject.SetActive(true);
+        Displaytext.text = "Robbie: \"Hey, I think I got it! Guys!Over here!\"";
+        //
+        GameObject.Find("txtreader").GetComponent<ReadText>().active = true;
+        GameObject.Find("txtreader").GetComponent<ReadText>().filename = "CorrectConsolePassword.txt";
+        //End Scene
+        StartCoroutine(wait());
+        return true;
+    }
 
-		Debug.Log ("did it");
-		scenechange.GetComponent<changeScene> ().active = true;
-		return true;
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(5);
+        //End Scene
+        GameObject.Find("SceneChange").GetComponent<changeScene>().active = true;
     }
 }
+

@@ -18,18 +18,18 @@ public class paintingText : MonoBehaviour {
 
         if (carolineTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = painting;
+            GameObject.Find("txtreader").GetComponent<ReadText>().active = true;
+            GameObject.Find("txtreader").GetComponent<ReadText>().filename = painting;
         }
 		else if (robbieTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = painting;
+            GameObject.Find("txtreader").GetComponent<ReadText>().active = true;
+            GameObject.Find("txtreader").GetComponent<ReadText>().filename = painting;
         }
 		if (yvetteTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = painting;
+            GameObject.Find("txtreader").GetComponent<ReadText>().active = true;
+            GameObject.Find("txtreader").GetComponent<ReadText>().filename = painting;
         }
 
     }

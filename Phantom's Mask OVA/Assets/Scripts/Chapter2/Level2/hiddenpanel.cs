@@ -14,6 +14,11 @@ public class hiddenpanel : MonoBehaviour {
 	public Sprite OffSprite;
     public Sprite FoundSprite;
 
+	public AudioSource SFX;
+	public AudioClip hinge;
+	public AudioClip panel;
+	public AudioClip click;
+
 	private bool yvetteTouching = false;
 	private bool robbieTouching = false;
 	private bool carolineTouching = false;
@@ -22,12 +27,15 @@ public class hiddenpanel : MonoBehaviour {
 	private int bullshittimer = 0;
     private int bullshitcounter = 0;
 
+	private bool opensound = true;
+
     //Textbox to read to
     private GameObject reader;
 
     void Start()
     {
         reader = GameObject.FindGameObjectWithTag("textbox");
+		SFX = GameObject.Find ("SFX").GetComponent<AudioSource> ();
     }
 
     // Update is called once per frame
@@ -47,6 +55,8 @@ public class hiddenpanel : MonoBehaviour {
             reader.GetComponent<ReadText>().filename = "CarolinePanelInteraction.txt";
             hidden = false;
             found = true;
+			SFX.clip = hinge;
+			SFX.Play ();
         }
 
         if (left.GetComponent<hiddenpanel>().found == true || right.GetComponent<hiddenpanel>().found == true)
@@ -61,10 +71,12 @@ public class hiddenpanel : MonoBehaviour {
         if (yvetteTouching && Input.GetKey("e") && !hidden && found)
         {
             bullshitcounter++;
+			PlaySound ("yvette");
         }
 
         if (!hidden && found && robbieTouching && Input.GetKey ("e")) {
 			ChangeStatus ();
+			PlaySound ("robbie");
 		}
 	}
 
@@ -90,7 +102,7 @@ public class hiddenpanel : MonoBehaviour {
 			gameObject.GetComponent<SpriteRenderer>().sprite = OffSprite;
 		} else if (!hidden && found) {
             gameObject.GetComponent<SpriteRenderer>().sprite = FoundSprite;
-        }
+		}
 	}
 
 
@@ -115,6 +127,17 @@ public class hiddenpanel : MonoBehaviour {
 		} else if (player.name == "Yvette") {
 			yvetteTouching = false;
 		} 
+	}
+
+	void PlaySound(string name) {
+		if (name == "yvette" && opensound) {
+			SFX.clip = panel;
+			SFX.Play();
+			opensound = false;
+		} else if (name == "robbie" && !opensound) {
+			SFX.clip = click;
+			SFX.Play ();
+		}
 	}
 
 }
