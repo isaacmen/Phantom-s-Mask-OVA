@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4892319841668000}
   - component: {fileID: 82558641061885592}
+  - component: {fileID: 114281067391715262}
   m_Layer: 0
   m_Name: Caroline Detect
   m_TagString: Untagged
@@ -51,7 +52,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a4db1c1fa2cada94c981ec5bab56a4b4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.015
+  m_Volume: 0.027
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -135,3 +136,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114281067391715262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1279945336998932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 084e656b9ca7a7f4980d2aedcda88e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ControlPlayerActive: {fileID: 0}

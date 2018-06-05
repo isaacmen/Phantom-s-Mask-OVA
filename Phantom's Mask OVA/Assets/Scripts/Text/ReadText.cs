@@ -53,6 +53,10 @@ public class ReadText : MonoBehaviour
     {
         if (active)
         {
+            //Enable the Boxes!
+            Textbox.gameObject.SetActive(true);
+            Displaytext.gameObject.SetActive(true);
+            //
 
             getlines();
 
@@ -76,6 +80,7 @@ public class ReadText : MonoBehaviour
                 active = false;
                 //Let the player swap chars again
                 changePlayerController(true);
+                Textbox.gameObject.SetActive(false);
             }
         }
 

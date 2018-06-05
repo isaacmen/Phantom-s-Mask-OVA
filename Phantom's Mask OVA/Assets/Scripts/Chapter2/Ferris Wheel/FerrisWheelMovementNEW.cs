@@ -92,6 +92,8 @@ public class FerrisWheelMovementNEW : MonoBehaviour
     public void checkCartAtBottom()
     {
         if (topCart.transform.position.x > -5.56 && topCart.transform.position.y < -3.56)
+        {
             changeStayStill(true);
+        }
     }
 }

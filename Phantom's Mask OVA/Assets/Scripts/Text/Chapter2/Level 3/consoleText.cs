@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class consoleText : MonoBehaviour {
+    //Sound when Caroline detects the machine
+    public GameObject carolineDetectSound;
+
 	public string level = "Chapter2 Level3b";
 
 	//Strings that have the file names
@@ -13,22 +16,26 @@ public class consoleText : MonoBehaviour {
     private static bool carolineTouch = false;
 
     //Checks if they are currently touching the box
-    private bool carolineTouching = false;
-    private bool robbieTouching = false;
-    private bool yvetteTouching = false;
+    private static bool carolineTouching = false;
+    private static bool robbieTouching = false;
+    private static bool yvetteTouching = false;
+    
+  
 
     // Update is called once per frame
     void Update()
     {
         if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
-            gameObject.GetComponent<ReadText>().active = true;
-            gameObject.GetComponent<ReadText>().filename = ConsoleCaroline;
+            GameObject.Find("txtreader").GetComponent<ReadText>().active = true;
+            GameObject.Find("txtreader").GetComponent<ReadText>().filename = ConsoleCaroline;
+            //DESTROYS THE SOUND
+            Destroy(carolineDetectSound);
             carolineTouch = true;
         }
-		else if (robbieTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
+		else if (carolineTouch && robbieTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         {
-            SceneManager.LoadScene ("Chapter2 Level3b");
+            SceneManager.LoadScene("Chapter2 Level3b");
         }
     }
 
