@@ -10,10 +10,23 @@ public class ch2lvl2door : MonoBehaviour {
 	public GameObject panel3;
 
 	private bool goodtogo = false;
+	private bool robbie = true;
+	private GameObject reader;
+
+
+	void Start () {
+		reader = GameObject.FindGameObjectWithTag("textbox");
+	}
 
 	// Update is called once per frame
 	void Update () {
 		CheckPanels ();
+
+		if (goodtogo && robbie) {
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = "RobbieDoorOpen.txt";
+			robbie = false;
+		}
 	}
 
 	void CheckPanels () {
@@ -34,7 +47,10 @@ public class ch2lvl2door : MonoBehaviour {
 
 	private void OnTriggerStay2D(Collider2D player) {
 		if (goodtogo && Input.GetKey ("e")) {
-			this.GetComponentInChildren<changeScene>().active = true;
+			this.GetComponentInChildren<changeScene> ().active = true;
+		} else if (Input.GetKey ("e")) {
+			reader.GetComponent<ReadText>().active = true;
+			reader.GetComponent<ReadText>().filename = "LockedDoor.txt";
 		}
 	}
 }
