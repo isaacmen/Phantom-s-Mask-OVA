@@ -26,4 +26,8 @@ public class fenceLadderCheck : MonoBehaviour {
     {
         fenceIsBusted = t;
     }
+	
+	public bool checkFenceIsBusted(){
+			return fenceIsBusted;
+	}
 }

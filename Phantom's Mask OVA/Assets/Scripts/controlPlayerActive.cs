@@ -37,6 +37,7 @@ public class controlPlayerActive : MonoBehaviour {
                 p1.GetComponent<playerControler>().enabled = true;
                 p2.GetComponent<playerControler>().enabled = false;
                 p3.GetComponent<playerControler>().enabled = false;
+				p3.GetComponent<Animator>().SetInteger("Direction", 0);
                 p1.GetComponent<SpriteRenderer>().sortingLayerName = "MainPlayer";
                 p2.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
                 p3.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
@@ -48,6 +49,7 @@ public class controlPlayerActive : MonoBehaviour {
                 p1.GetComponent<playerControler>().enabled = false;
                 p2.GetComponent<playerControler>().enabled = true;
                 p3.GetComponent<playerControler>().enabled = false;
+				p1.GetComponent<Animator>().SetInteger("Direction", 0);
                 p1.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
                 p2.GetComponent<SpriteRenderer>().sortingLayerName = "MainPlayer";
                 p3.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
@@ -59,6 +61,7 @@ public class controlPlayerActive : MonoBehaviour {
                 p1.GetComponent<playerControler>().enabled = false;
                 p2.GetComponent<playerControler>().enabled = false;
                 p3.GetComponent<playerControler>().enabled = true;
+				p2.GetComponent<Animator>().SetInteger("Direction", 0);
                 p1.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
                 p2.GetComponent<SpriteRenderer>().sortingLayerName = "BackgroundPlayer";
                 p3.GetComponent<SpriteRenderer>().sortingLayerName = "MainPlayer";

@@ -10,7 +10,19 @@ public class fenceCheck : MonoBehaviour {
     private bool yvetteTouching = false;
     private bool carolineTouching = false;
     private bool robbieTouching = false;
+	
+	private const string FenceCaroline = "Fence_Caroline.txt";
+	private const string FenceRobbie = "Fence_Robbie (when Yvette breaks it).txt";
+	private const string FenceYvette = "Fence_Yvette (When Robbie takes it apart).txt";
 
+	
+	//Textbox to read to
+    private GameObject reader;
+
+    void Start()
+    {
+        reader = GameObject.FindGameObjectWithTag("textbox");
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,10 +31,18 @@ public class fenceCheck : MonoBehaviour {
             if(GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
             {
                 ladder.GetComponent<fenceLadderCheck>().setFenceIsBusted(true);
-        
                 Destroy(gameObject);
+				reader.GetComponent<ReadText>().active = true;
+				reader.GetComponent<ReadText>().filename = FenceRobbie;
             }
         }
+		
+		else if (carolineTouching && Input.GetKeyDown("e")){
+			if(GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline"){
+					reader.GetComponent<ReadText>().active = true;
+					reader.GetComponent<ReadText>().filename = FenceCaroline;
+			}
+		}
 
         else if (robbieTouching && Input.GetKeyDown("e"))
         {
@@ -30,11 +50,13 @@ public class fenceCheck : MonoBehaviour {
             {
                 ladder.GetComponent<fenceLadderCheck>().setFenceIsBusted(false);
                 Destroy(gameObject);
+				reader.GetComponent<ReadText>().active = true;
+				reader.GetComponent<ReadText>().filename = FenceYvette;
             }
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D player)
+    private void OnTriggerEnter2D(Collider2D player)
     {
         //Check if Caroline is touching the car
         if (player.gameObject.name == "Caroline")
@@ -48,7 +70,7 @@ public class fenceCheck : MonoBehaviour {
             yvetteTouching = true;
     }
 
-    private void OnCollisionExit2D(Collision2D player)
+    private void OnTriggerExit2D(Collider2D player)
     {
         //Check if Caroline is touching the car
         if (player.gameObject.name == "Caroline")
