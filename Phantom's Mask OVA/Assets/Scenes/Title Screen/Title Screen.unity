@@ -1628,7 +1628,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Artists:\r\nCarolee Nguyen \r\nHenry Nguyen \r\nShirley Nieto\r\n\r\nProducers:\r\nIsaac
-    Meen\r\nKiara Mendaros\r\n\r\nProgramers:\r\nAbigail Jimenez\r\nIsaac Meen\r\nWesley
+    Men\r\nKiara Mendaros\r\n\r\nProgramers:\r\nAbigail Jimenez\r\nIsaac Men\r\nWesley
     Tsai\r\n\r\nWriter:\r\nNick Hsu"
 --- !u!222 &976561354
 CanvasRenderer:
