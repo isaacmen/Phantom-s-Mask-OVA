@@ -824,7 +824,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4487118784849100, guid: d9ad730d4f6a5844a8a7d1af99d8f8ee, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.62
+      value: -2.74
       objectReference: {fileID: 0}
     - target: {fileID: 4487118784849100, guid: d9ad730d4f6a5844a8a7d1af99d8f8ee, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1821,7 +1821,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.7742774, y: -0.6073866}
+  m_Offset: {x: -2.9384356, y: -0.6073866}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1832,7 +1832,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4514451, y: 3.585227}
+  m_Size: {x: 0.12312865, y: 3.585227}
   m_EdgeRadius: 0
 --- !u!4 &1397492721 stripped
 Transform:
