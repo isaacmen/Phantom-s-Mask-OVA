@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class hiddenpanel : MonoBehaviour {
+    //Caroline Detect sounds
+    public GameObject carolineDetect;
 
 	public bool hidden = true;
     public bool found = false;
@@ -50,9 +52,10 @@ public class hiddenpanel : MonoBehaviour {
 
 		ChangeSprite ();
 
-		if (carolineTouching && Input.GetKey ("e") && hidden) {
+		if (carolineTouching && Input.GetKey ("e") && hidden && (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline")) {
             reader.GetComponent<ReadText>().active = true;
             reader.GetComponent<ReadText>().filename = "CarolinePanelInteraction.txt";
+            Destroy(carolineDetect);
             hidden = false;
             found = true;
 			SFX.clip = hinge;
@@ -68,13 +71,13 @@ public class hiddenpanel : MonoBehaviour {
             }
         }
 
-        if (yvetteTouching && Input.GetKey("e") && !hidden && found)
+        if (yvetteTouching && Input.GetKey("e") && !hidden && found && (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette"))
         {
             bullshitcounter++;
 			PlaySound ("yvette");
         }
 
-        if (!hidden && found && robbieTouching && Input.GetKey ("e")) {
+        if (!hidden && found && robbieTouching && Input.GetKey ("e") && (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")) {
 			ChangeStatus ();
 			PlaySound ("robbie");
 		}
