@@ -14,6 +14,8 @@ public class fenceCheck : MonoBehaviour {
 	private const string FenceCaroline = "Fence_Caroline.txt";
 	private const string FenceRobbie = "Fence_Robbie (when Yvette breaks it).txt";
 	private const string FenceYvette = "Fence_Yvette (When Robbie takes it apart).txt";
+	
+	private bool carolineTouched = false;
 
 	
 	//Textbox to read to
@@ -26,7 +28,7 @@ public class fenceCheck : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(yvetteTouching && Input.GetKeyDown("e"))
+		if(yvetteTouching && Input.GetKeyDown("e") && carolineTouched)
         {
             if(GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
             {
@@ -41,10 +43,11 @@ public class fenceCheck : MonoBehaviour {
 			if(GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline"){
 					reader.GetComponent<ReadText>().active = true;
 					reader.GetComponent<ReadText>().filename = FenceCaroline;
+					carolineTouched = true;
 			}
 		}
 
-        else if (robbieTouching && Input.GetKeyDown("e"))
+        else if (robbieTouching && Input.GetKeyDown("e") && carolineTouched)
         {
             if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")
             {

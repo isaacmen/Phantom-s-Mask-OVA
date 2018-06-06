@@ -12,6 +12,8 @@ public class ladderText : MonoBehaviour {
 	private const string LadderRobbieFixed = "Ladder_Robbie (with fence piece).txt";
 	private const string LadderYvette = "Ladder_Yvette.txt";
 	
+	public Sprite mySprite;
+	
 	private GameObject reader;
 
 	// Use this for initialization
@@ -35,6 +37,7 @@ public class ladderText : MonoBehaviour {
 					reader.GetComponent<ReadText>().filename = LadderRobbieBroken;
 				}
 				else{
+					this.GetComponent<SpriteRenderer>().sprite = mySprite;
 					reader.GetComponent<ReadText>().filename = LadderRobbieFixed;
 				}
 			}

@@ -36,7 +36,6 @@ public class hiddenDoorText : MonoBehaviour {
         //Check if Caroline is touching the car
         if (player.gameObject.name == "Caroline"){
             carolineTouching = true;
-			Debug.Log ("CARO TOUCHING");
 		}
         //Check if Robbie is touching the car
         else if (player.gameObject.name == "Robbie")
