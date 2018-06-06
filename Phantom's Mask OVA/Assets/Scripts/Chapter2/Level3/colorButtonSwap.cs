@@ -18,7 +18,7 @@ public class colorButtonSwap : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (wheel.GetComponent<FerrisWheelMovementNEW>().finished == false)
+        if (wheel.GetComponent<FerrisWheelMovementNEW>().finished == false && !GameObject.Find("txtreader").GetComponent<ReadText>().active)
         {
             if (wheel.GetComponent<FerrisWheelMovementNEW>().playerOrder[0] != 0)
                 o0.GetComponent<Renderer>().enabled = false;
@@ -47,7 +47,7 @@ public class colorButtonSwap : MonoBehaviour {
 
             if (wheel.GetComponent<FerrisWheelMovementNEW>().counter == 5)
             {
-                checkArrayMatch(wheel.GetComponent<FerrisWheelMovementNEW>().correctOrder, wheel.GetComponent<FerrisWheelMovementNEW>().playerOrder);   
+                checkArrayMatch(wheel.GetComponent<FerrisWheelMovementNEW>().correctOrder, wheel.GetComponent<FerrisWheelMovementNEW>().playerOrder);
             }
         }
     }
@@ -58,6 +58,25 @@ public class colorButtonSwap : MonoBehaviour {
         {
             if (a[i] != b[i])
             {
+                // Disable the renderers
+                o0.GetComponent<Renderer>().enabled = false;
+                o1.GetComponent<Renderer>().enabled = false;
+                o2.GetComponent<Renderer>().enabled = false;
+                o3.GetComponent<Renderer>().enabled = false;
+                o4.GetComponent<Renderer>().enabled = false;
+
+                //Wrong text
+                GameObject.Find("txtreader").GetComponent<ReadText>().active = true;
+                GameObject.Find("txtreader").GetComponent<ReadText>().filename = "Incorrect Console Password.txt";
+                //
+                wheel.GetComponent<FerrisWheelMovementNEW>().playerOrder[0] = 0;
+                wheel.GetComponent<FerrisWheelMovementNEW>().playerOrder[1] = 0;
+                wheel.GetComponent<FerrisWheelMovementNEW>().playerOrder[2] = 0;
+                wheel.GetComponent<FerrisWheelMovementNEW>().playerOrder[3] = 0;
+                wheel.GetComponent<FerrisWheelMovementNEW>().playerOrder[4] = 0;
+                wheel.GetComponent<FerrisWheelMovementNEW>().counter = 0;
+                
+
                 return false;
             }
         }

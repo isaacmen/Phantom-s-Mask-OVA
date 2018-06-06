@@ -35,7 +35,7 @@ public class FerrisWheelMovementNEW : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        if (stayStill == false)
+        if (stayStill == false && !GameObject.Find("txtreader").GetComponent<ReadText>().active)
         {
             spinLeftMove();
             checkCartAtBottom();
@@ -45,7 +45,7 @@ public class FerrisWheelMovementNEW : MonoBehaviour
 
     public void setButton(int i)
     {
-        if(finished == false)
+        if(finished == false && !GameObject.Find("txtreader").GetComponent<ReadText>().active)
         {
             if (counter >= 5)
             {
