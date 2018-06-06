@@ -32,7 +32,7 @@ public class consoleText : MonoBehaviour {
     void Update()
     {
         if(carolineTouch)
-            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<SpriteRenderer>().enabled = true;
         if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
             GameObject.Find("txtreader").GetComponent<ReadText>().active = true;
