@@ -10,6 +10,9 @@ public class colorButtonSwap : MonoBehaviour {
     public GameObject o4;
     public GameObject wheel;
 
+    //Machine works sound
+    public GameObject sound;
+
     public UnityEngine.UI.Text Displaytext;
     public UnityEngine.UI.Image Textbox;
 
@@ -73,6 +76,7 @@ public class colorButtonSwap : MonoBehaviour {
 
     IEnumerator wait()
     {
+        sound.GetComponent<AudioSource>().enabled = true;
         yield return new WaitForSeconds(5);
         //End Scene
         GameObject.Find("SceneChange").GetComponent<changeScene>().active = true;
