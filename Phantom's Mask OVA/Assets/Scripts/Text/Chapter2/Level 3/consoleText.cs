@@ -7,6 +7,11 @@ public class consoleText : MonoBehaviour {
     //Sound when Caroline detects the machine
     public GameObject carolineDetectSound;
 
+    //PC turns on sprite
+    public GameObject turnOn;
+    //Turn on sound
+    public GameObject turnOnSound;
+
 	public string level = "Chapter2 Level3b";
 
 	//Strings that have the file names
@@ -19,22 +24,32 @@ public class consoleText : MonoBehaviour {
     private static bool carolineTouching = false;
     private static bool robbieTouching = false;
     private static bool yvetteTouching = false;
+   
     
   
 
     // Update is called once per frame
     void Update()
     {
+        if(carolineTouch)
+            GetComponent<SpriteRenderer>().enabled = false;
         if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
             GameObject.Find("txtreader").GetComponent<ReadText>().active = true;
             GameObject.Find("txtreader").GetComponent<ReadText>().filename = ConsoleCaroline;
             //DESTROYS THE SOUND
             Destroy(carolineDetectSound);
+            //Turn o the PC
+            //turnOn.GetComponent<SpriteRenderer>().enabled = true;
+            GetComponent<SpriteRenderer>().enabled = false;
+            //Sound
+            turnOnSound.GetComponent<AudioSource>().enabled = true;
+            //Done
             carolineTouch = true;
         }
 		else if (carolineTouch && robbieTouching && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
         {
+
             SceneManager.LoadScene("Chapter2 Level3b");
         }
     }
