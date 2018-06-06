@@ -1255,10 +1255,13 @@ MonoBehaviour:
   yvette: {fileID: 170056100}
   chris: {fileID: 604815246}
   txt: {fileID: 50724706}
+  newbg: {fileID: 21300000, guid: 4a1dcac9a0fd8464eb515c37611fccef, type: 3}
   ball: {fileID: 1867363416}
   diary: {fileID: 895726620}
+  background: {fileID: 641004284}
   ballsound: {fileID: 8300000, guid: 82b0e7f268bce6241a653e781818e04c, type: 3}
   diarysound: {fileID: 8300000, guid: 6559452ad2c6324489634c4db71c03c3, type: 3}
+  poweroutage: {fileID: 8300000, guid: db76cdac0aeed9245a895faca7160691, type: 3}
 --- !u!4 &1795560970
 Transform:
   m_ObjectHideFlags: 0

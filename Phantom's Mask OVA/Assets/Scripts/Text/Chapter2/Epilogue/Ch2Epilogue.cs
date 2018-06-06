@@ -10,12 +10,15 @@ public class Ch2Epilogue : MonoBehaviour {
 	public GameObject yvette;
 	public GameObject chris;
 	public Text txt;
+	public Sprite newbg;
 
 	public GameObject ball;
 	public GameObject diary;
+	public GameObject background;
 
 	public AudioClip ballsound;
 	public AudioClip diarysound;
+	public AudioClip poweroutage;
 
 	private AudioSource SFX;
 	private GameObject reader;
@@ -97,6 +100,9 @@ public class Ch2Epilogue : MonoBehaviour {
 		yield return new WaitForSeconds(1);
 		yield return new WaitWhile(() => txt.text != "");
 
+		SFX.clip = poweroutage;
+		SFX.Play ();
+		background.GetComponent<SpriteRenderer> ().sprite = newbg;
 		reader.GetComponent<ReadText> ().filename = "Power Outage(6).txt";
 		reader.GetComponent<ReadText> ().active = true;
 		yield return new WaitForSeconds(1);
