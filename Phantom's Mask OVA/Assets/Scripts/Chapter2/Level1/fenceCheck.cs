@@ -5,6 +5,8 @@ using UnityEngine;
 public class fenceCheck : MonoBehaviour {
 
     public GameObject ladder;
+    //Caroline etect sound
+    public GameObject carolineDetect;
 
     //Checks who is touching it
     private bool yvetteTouching = false;
@@ -32,6 +34,7 @@ public class fenceCheck : MonoBehaviour {
         {
             if(GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
             {
+                Destroy(carolineDetect);
                 ladder.GetComponent<fenceLadderCheck>().setFenceIsBusted(true);
                 Destroy(gameObject);
 				reader.GetComponent<ReadText>().active = true;
@@ -41,7 +44,8 @@ public class fenceCheck : MonoBehaviour {
 		
 		else if (carolineTouching && Input.GetKeyDown("e")){
 			if(GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline"){
-					reader.GetComponent<ReadText>().active = true;
+                     Destroy(carolineDetect);
+                     reader.GetComponent<ReadText>().active = true;
 					reader.GetComponent<ReadText>().filename = FenceCaroline;
 					carolineTouched = true;
 			}
