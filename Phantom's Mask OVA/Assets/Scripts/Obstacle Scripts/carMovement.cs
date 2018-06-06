@@ -114,7 +114,7 @@ public class carMovement : MonoBehaviour {
     void check_p1()
     {
         //If it collided with p1 and space is being held and is not in car and is touching
-        if (Input.GetKeyDown(KeyCode.Space) && p1inCar == false && touchingp1 == true)
+		if (Input.GetKeyDown("e") && p1inCar == false && touchingp1 == true)
         {
             //player is now in car
             p1inCar = true;
@@ -139,7 +139,7 @@ public class carMovement : MonoBehaviour {
     void check_p2()
     {
         //If it collided with p1 and space is being held and is not in car and is touching
-        if (Input.GetKeyDown(KeyCode.Space) && p2inCar == false && touchingp2 == true)
+		if (Input.GetKeyDown("e") && p2inCar == false && touchingp2 == true)
         {
             //player is now in car
             p2inCar = true;
@@ -164,7 +164,7 @@ public class carMovement : MonoBehaviour {
     void check_p3()
     {
         //If it collided with p1 and space is being held and is not in car and is touching
-        if (Input.GetKeyDown(KeyCode.Space) && p3inCar == false && touchingp3 == true)
+		if (Input.GetKeyDown("e") && p3inCar == false && touchingp3 == true)
         {
             //player is now in car
             p3inCar = true;

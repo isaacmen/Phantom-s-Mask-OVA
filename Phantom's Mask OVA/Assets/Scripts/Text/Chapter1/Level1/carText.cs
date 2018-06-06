@@ -168,7 +168,7 @@ public class carText : MonoBehaviour
     IEnumerator CarStartUpSound()
     {
         carSound.GetComponent<AudioSource>().enabled = true;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         Debug.Log("Car Started");
         reader.GetComponent<ReadText>().active = true;
         reader.GetComponent<ReadText>().filename = RobbieFixCar;
