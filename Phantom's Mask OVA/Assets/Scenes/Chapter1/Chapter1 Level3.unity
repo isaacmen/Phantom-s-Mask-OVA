@@ -352,7 +352,6 @@ GameObject:
   - component: {fileID: 158143682}
   - component: {fileID: 158143681}
   - component: {fileID: 158143680}
-  - component: {fileID: 158143679}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -360,13 +359,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &158143679
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 158143678}
-  m_Enabled: 1
 --- !u!124 &158143680
 Behaviour:
   m_ObjectHideFlags: 0
@@ -629,6 +621,48 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 202831236}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1001 &217898714
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892319841668000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 911e2061492ef6a40be3b54745abf504, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &351993163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,7 +1081,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 837bbf5977de18848bafdb5d98d59493, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.507
+  m_Volume: 0.164
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1241,7 +1275,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.699
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1555,6 +1589,13 @@ GameObject:
   m_PrefabParentObject: {fileID: 1748476952796998, guid: 667ee790878f2b847815f7e4c47ee701,
     type: 2}
   m_PrefabInternal: {fileID: 373774237}
+--- !u!81 &1562926997
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1562926996}
+  m_Enabled: 1
 --- !u!4 &1562927001 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4264702922622076, guid: 667ee790878f2b847815f7e4c47ee701,
@@ -2030,6 +2071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0257b13e3bd5054419c77baaeef1a033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carolineDetect: {fileID: 2129579154}
 --- !u!61 &2085284206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2107,3 +2149,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3787c497189f2504d8b699681c3c17ca, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2129579154 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1279945336998932, guid: 911e2061492ef6a40be3b54745abf504,
+    type: 2}
+  m_PrefabInternal: {fileID: 217898714}

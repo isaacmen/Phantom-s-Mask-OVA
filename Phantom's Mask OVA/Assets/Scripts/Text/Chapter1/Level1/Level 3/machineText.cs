@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class machineText : MonoBehaviour {
+    //Caroline detect sound
+    public GameObject carolineDetect;
 
 	 //Strings that have the file names
     private const string TextCaroline = "CarolineDetect-Machine.txt";
@@ -20,6 +22,7 @@ public class machineText : MonoBehaviour {
     {
         if (carolineTouching && !carolineTouch && GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline" && Input.GetKey("e"))
         {
+            Destroy(carolineDetect);
             gameObject.GetComponent<ReadText>().active = true;
             gameObject.GetComponent<ReadText>().filename = TextCaroline;
             carolineTouch = true;
