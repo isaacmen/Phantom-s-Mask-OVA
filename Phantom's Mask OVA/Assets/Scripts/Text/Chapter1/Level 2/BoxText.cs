@@ -16,20 +16,21 @@ public class BoxText : MonoBehaviour {
     private bool robbieTouching = false;
     private bool yvetteTouching = false;
 
+	private GameObject SFX;
+
     //Textbox to read to
     private GameObject reader;
 
     void Start()
     {
         reader = GameObject.FindGameObjectWithTag("textbox");
+		SFX = GameObject.Find ("SFX");
     }
 
     // Update is called once per frame
     void Update () {
 		if (robbieTouching && GameObject.Find("Playercontroller").GetComponent<controlPlayerActive>().isActiveName() == "Robbie" && Input.GetKey("e"))
-        {
-            Debug.Log("dicks");
-
+		{
             reader.GetComponent<ReadText>().active = true;
             reader.GetComponent<ReadText>().filename = BoxRobbie;
         }
@@ -43,6 +44,7 @@ public class BoxText : MonoBehaviour {
         else if (yvetteTouching && Input.GetKey("e") && GameObject.Find("Playercontroller").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
         {
             gameObject.GetComponent<BoxText>().enabled = false;
+			SFX.GetComponent<AudioSource> ().Play ();
         }
 
         

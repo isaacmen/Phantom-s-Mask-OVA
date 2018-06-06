@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class buttonDeleteDoor : MonoBehaviour {
-    public GameObject door; //Get the gameobject door this will control
+	public AudioClip doorsound;
+	public GameObject door; //Get the gameobject door this will control
     private bool doorDestroyed; //Keeps track if the door was already destroyed, is only used in this script(Static)
     private bool robbieTouching = false; //If Robbie is touching the object
 
@@ -30,6 +31,11 @@ public class buttonDeleteDoor : MonoBehaviour {
                     //Destroy the Door gameobject
                     Destroy(door);
                     doorDestroyed = true;
+					GameObject.Find ("SFX").GetComponent<AudioSource> ().clip = doorsound;
+					GameObject.Find ("SFX").GetComponent<AudioSource> ().Play();
+					GameObject.FindGameObjectWithTag("textbox").GetComponent<ReadText>().active = true;
+					GameObject.FindGameObjectWithTag("textbox").GetComponent<ReadText>().filename = "RobbieDoor.txt";
+
                 }
             }
         }

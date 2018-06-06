@@ -30,6 +30,7 @@ public class invisibleButtonLvl1 : MonoBehaviour {
                     gameObject.GetComponent<buttonDeleteDoor>().enabled = true;
                     isInvisible = false;
                     gameObject.GetComponent<invisibleButtonLvl1>().enabled = false;
+					GameObject.Find ("SFX").GetComponent<ch1lvl3SFX> ().ComputerSound ();
                 }
             }
         }
