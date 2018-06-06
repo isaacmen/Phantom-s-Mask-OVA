@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 641004286}
   - component: {fileID: 641004285}
   m_Layer: 0
-  m_Name: Phantom_Mask_Ferris_Wheel_Lights_Off
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -853,7 +853,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a1dcac9a0fd8464eb515c37611fccef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 739e9bdaac5064346aa91454efc9493b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
