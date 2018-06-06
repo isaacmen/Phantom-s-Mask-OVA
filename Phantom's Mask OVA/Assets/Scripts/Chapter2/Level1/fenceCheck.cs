@@ -28,7 +28,7 @@ public class fenceCheck : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(yvetteTouching && Input.GetKeyDown("e") && carolineTouched)
+		if(yvetteTouching && Input.GetKeyDown("e"))
         {
             if(GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Yvette")
             {
