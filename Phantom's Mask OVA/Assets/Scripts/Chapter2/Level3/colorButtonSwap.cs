@@ -10,6 +10,9 @@ public class colorButtonSwap : MonoBehaviour {
     public GameObject o4;
     public GameObject wheel;
 
+    //Ferris wheel off image
+    public GameObject ferrisWheelOn;
+
     //Machine works sound
     public GameObject sound;
 
@@ -58,13 +61,6 @@ public class colorButtonSwap : MonoBehaviour {
         {
             if (a[i] != b[i])
             {
-                // Disable the renderers
-                o0.GetComponent<Renderer>().enabled = false;
-                o1.GetComponent<Renderer>().enabled = false;
-                o2.GetComponent<Renderer>().enabled = false;
-                o3.GetComponent<Renderer>().enabled = false;
-                o4.GetComponent<Renderer>().enabled = false;
-
                 //Wrong text
                 GameObject.Find("txtreader").GetComponent<ReadText>().active = true;
                 GameObject.Find("txtreader").GetComponent<ReadText>().filename = "Incorrect Console Password.txt";
@@ -85,9 +81,6 @@ public class colorButtonSwap : MonoBehaviour {
         //READ THE TEXT //
         Textbox.gameObject.SetActive(true);
         Displaytext.text = "Robbie: \"Hey, I think I got it! Guys!Over here!\"";
-        //
-        GameObject.Find("txtreader").GetComponent<ReadText>().active = true;
-        GameObject.Find("txtreader").GetComponent<ReadText>().filename = "CorrectConsolePassword.txt";
         //End Scene
         StartCoroutine(wait());
         return true;
@@ -95,6 +88,8 @@ public class colorButtonSwap : MonoBehaviour {
 
     IEnumerator wait()
     {
+        //Turn ferris wheel on sprite
+        ferrisWheelOn.gameObject.SetActive(true);
         sound.GetComponent<AudioSource>().enabled = true;
         yield return new WaitForSeconds(5);
         //End Scene
