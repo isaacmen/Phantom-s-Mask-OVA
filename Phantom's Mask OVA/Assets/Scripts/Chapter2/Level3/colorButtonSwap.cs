@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class colorButtonSwap : MonoBehaviour {
+    //Go back button
+    public GameObject goBack;
+
+    //The buttons
     public GameObject o0;
     public GameObject o1;
     public GameObject o2;
@@ -80,6 +84,7 @@ public class colorButtonSwap : MonoBehaviour {
         wheel.GetComponent<FerrisWheelMovementNEW>().changeStayStill(false);
         //READ THE TEXT //
         Textbox.gameObject.SetActive(true);
+        Destroy(goBack);
         Displaytext.text = "Robbie: \"Hey, I think I got it! Guys!Over here!\"";
         //End Scene
         StartCoroutine(wait());
