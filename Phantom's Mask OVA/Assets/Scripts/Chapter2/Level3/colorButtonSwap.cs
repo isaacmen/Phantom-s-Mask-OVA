@@ -85,7 +85,7 @@ public class colorButtonSwap : MonoBehaviour {
         //READ THE TEXT //
         Textbox.gameObject.SetActive(true);
         Destroy(goBack);
-        Displaytext.text = "Robbie: \"Hey, I think I got it! Guys!Over here!\"";
+        Displaytext.text = "Robbie: \"Hey, I think I got it! Guys! Over here!\"";
         //End Scene
         StartCoroutine(wait());
         return true;
