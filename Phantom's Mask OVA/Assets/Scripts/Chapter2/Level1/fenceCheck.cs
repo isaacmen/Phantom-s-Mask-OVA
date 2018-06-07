@@ -42,7 +42,7 @@ public class fenceCheck : MonoBehaviour {
             }
         }
 		
-		else if (carolineTouching && Input.GetKeyDown("e")){
+		if (carolineTouching && Input.GetKeyDown("e")){
 			if(GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Caroline"){
                      Destroy(carolineDetect);
                      reader.GetComponent<ReadText>().active = true;
@@ -51,7 +51,7 @@ public class fenceCheck : MonoBehaviour {
 			}
 		}
 
-        else if (robbieTouching && Input.GetKeyDown("e") && carolineTouched)
+        if (robbieTouching && Input.GetKeyDown("e") && carolineTouched)
         {
             if (GameObject.Find("controlPlayerActive").GetComponent<controlPlayerActive>().isActiveName() == "Robbie")
             {
